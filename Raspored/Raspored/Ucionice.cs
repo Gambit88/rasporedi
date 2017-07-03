@@ -29,5 +29,9 @@ namespace Raspored
             Podaci.Remove(Podaci.First(item => item.Oznaka == oznaka));
             return;
         }
+        public Ucionica get(string oznaka)
+        {
+            return Podaci.First(item => item.Oznaka == oznaka);
+        }
     }
 }

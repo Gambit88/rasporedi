@@ -54,6 +54,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Predmet.cs" />
+    <Compile Include="Predmeti.cs" />
+    <Compile Include="Smer.cs" />
+    <Compile Include="Smerovi.cs" />
+    <Compile Include="Softver.cs" />
+    <Compile Include="Softveri.cs" />
+    <Compile Include="Termin.cs" />
+    <Compile Include="Termini.cs" />
+    <Compile Include="Ucionica.cs" />
+    <Compile Include="Ucionice.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

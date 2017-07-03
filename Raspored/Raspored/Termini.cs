@@ -68,5 +68,9 @@ namespace Raspored
             }
             return true;
         }
+        public Termin get(int broj)
+        {
+            return Podaci.First(item => item.Broj == broj);
+        }
     }
 }

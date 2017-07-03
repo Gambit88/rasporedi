@@ -29,6 +29,10 @@ namespace Raspored
             Podaci.Remove(Podaci.First(item => item.Oznaka == oznaka));
             return;
         }
+        public Softver get(string oznaka)
+        {
+            return Podaci.First(item => item.Oznaka == oznaka);
+        }
 
     }
 }

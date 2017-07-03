@@ -30,5 +30,9 @@ namespace Raspored
             Podaci.Remove(Podaci.First(item => item.Oznaka == oznaka));
             return;
         }
+        public Smer get(string oznaka)
+        {
+            return Podaci.First(item => item.Oznaka == oznaka);
+        }
     }
 }
