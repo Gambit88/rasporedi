@@ -22,10 +22,7 @@ namespace Raspored
         public void edit(string oznaka, string naziv, string opis, DateTime datum)
         {
             Smer s = Podaci.First(item => item.Oznaka == oznaka);
-            s.Oznaka = oznaka;
-            s.Naziv = naziv;
-            s.Opis = opis;
-            s.Datum = datum;
+            s.edit(naziv, opis, datum);
             return;
         }
         public void remove(string oznaka)

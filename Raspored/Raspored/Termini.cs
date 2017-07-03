@@ -10,19 +10,19 @@ namespace Raspored
     {
         public List<Termin> Podaci { get; set; }
         private int counter = 1;
-        public bool add(int broj, string naziv, string opis, DateTime datum)
+        public bool add(int broj, int trajanje, DateTime pocetak)
         {
             if (Podaci.First(item => item.Broj == broj) != null)
             {
-                Podaci.Add(new Termin());
+                Podaci.Add(new Termin(broj, trajanje, pocetak));
                 return true;
             }
             return false;
         }
-        public void edit(int broj, string naziv, string opis, DateTime datum)
+        public void edit(int broj, DateTime pocetak)
         {
             Termin s = Podaci.First(item => item.Broj == broj);
-            s.Broj = broj;
+            s.edit(pocetak);
             return;
         }
         public void remove(int broj)

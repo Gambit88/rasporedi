@@ -20,5 +20,11 @@ namespace Raspored
             this.Opis = opis;
             this.Datum = datum;
         }
+        public void edit(string naziv, string opis, DateTime datum)
+        {
+            this.Naziv = naziv;
+            this.Opis = opis;
+            this.Datum = datum;
+        }
     }
 }

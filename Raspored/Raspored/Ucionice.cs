@@ -9,19 +9,19 @@ namespace Raspored
     class Ucionice
     {
         public List<Ucionica> Podaci { get; set; }
-        public bool add(string oznaka, string naziv, string opis, DateTime datum)
+        public bool add(string oznaka, string opis, int brMesta, bool projektor, bool tabla, bool smart, string os, Softveri softver)
         {
             if (Podaci.First(item => item.Oznaka == oznaka) != null)
             {
-                Podaci.Add(new Ucionica());
+                Podaci.Add(new Ucionica(oznaka, opis, brMesta, projektor, tabla, smart, os, softver));
                 return true;
             }
             return false;
         }
-        public void edit(string oznaka, string naziv, string opis, DateTime datum)
+        public void edit(string oznaka, string opis, int brMesta, bool projektor, bool tabla, bool smart, string os, Softveri softver)
         {
             Ucionica s = Podaci.First(item => item.Oznaka == oznaka);
-            s.Oznaka = oznaka;
+            s.edit(opis, brMesta, projektor, tabla, smart, os, softver);
             return;
         }
         public void remove(string oznaka)

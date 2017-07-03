@@ -16,5 +16,27 @@ namespace Raspored
         public string Sajt { get; set; }
         public string GodinaIzdanja { get; set; }
         public float Cena { get; set; }
+
+        public Softver(string oznaka, string naziv, string opis, string os, string proizvodjac, string sajt, string godinaIzdanja, float cena)
+        {
+            this.Oznaka = oznaka;
+            this.Naziv = naziv;
+            this.Opis = opis;
+            this.Os = os;
+            this.Proizvodjac = proizvodjac;
+            this.Sajt = sajt;
+            this.GodinaIzdanja = godinaIzdanja;
+            this.Cena = cena;
+        }
+        public void edit(string naziv, string opis, string os, string proizvodjac, string sajt, string godinaIzdanja, float cena)
+        {
+            this.Naziv = naziv;
+            this.Opis = opis;
+            this.Os = os;
+            this.Proizvodjac = proizvodjac;
+            this.Sajt = sajt;
+            this.GodinaIzdanja = godinaIzdanja;
+            this.Cena = cena;
+        }
     }
 }

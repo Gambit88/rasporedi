@@ -36,5 +36,19 @@ namespace Raspored
             this.Os = os;
             this.Softver = Softver;
         }
+        public void edit(string naziv, string opis, Smer smer, int velicinaGrupe, int brCasovaMin, int brTermina, bool projektor, bool tabla, bool smart, string os, Softveri softveri)
+        {
+            this.Naziv = naziv;
+            this.Opis = opis;
+            this.Smer = smer;
+            this.VelicinaGrupe = velicinaGrupe;
+            this.BrCasovaMin = brCasovaMin;
+            this.BrTermina = brTermina;
+            this.Projektor = projektor;
+            this.Tabla = tabla;
+            this.Smart = smart;
+            this.Os = os;
+            this.Softver = Softver;
+        }
     }
 }
