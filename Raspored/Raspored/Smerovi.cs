@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 using System.IO;
 
 namespace Raspored
 {
     class Smerovi
     {
-        public List<Smer> Podaci { get; set; }
+        public ObservableCollection<Smer> Podaci { get; set; }
 
         public bool add(string oznaka, string naziv, string opis, DateTime datum)
         {

@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 using System.IO;
 
 namespace Raspored
 {
     class Ucionice
     {
-        public List<Ucionica> Podaci { get; set; }
+        public ObservableCollection<Ucionica> Podaci { get; set; }
         public bool add(string oznaka, string opis, int brMesta, bool projektor, bool tabla, bool smart, string os, Softveri softver)
         {
             if (Podaci.First(item => item.Oznaka == oznaka) != null)
