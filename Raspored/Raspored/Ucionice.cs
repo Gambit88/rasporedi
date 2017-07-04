@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Raspored
 {
@@ -32,6 +33,20 @@ namespace Raspored
         public Ucionica get(string oznaka)
         {
             return Podaci.First(item => item.Oznaka == oznaka);
+        }
+        public void save(BinaryWriter bw)
+        {
+            foreach(Ucionica ucionica in Podaci)
+            {
+                ucionica.save(bw);
+            }
+        }
+        public void load(BinaryReader br)
+        {
+            foreach(Ucionica ucionica in Podaci)
+            {
+                ucionica.load(br);
+            }
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Raspored
 {
@@ -71,6 +72,20 @@ namespace Raspored
         public Termin get(int broj)
         {
             return Podaci.First(item => item.Broj == broj);
+        }
+        public void save(BinaryWriter bw)
+        {
+            foreach (Termin termin in Podaci)
+            {
+                termin.save(bw);
+            }
+        }
+        public void load(BinaryReader br)
+        {
+            foreach (Termin termin in Podaci)
+            {
+                termin.load(br);
+            }
         }
     }
 }

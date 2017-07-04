@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Raspored
 {
@@ -32,6 +33,20 @@ namespace Raspored
         public Predmet get(string oznaka)
         {
             return Podaci.First(item => item.Oznaka == oznaka);
+        }
+        public void save(BinaryWriter bw)
+        {
+            foreach (Predmet predmet in Podaci)
+            {
+                predmet.save(bw);
+            }
+        }
+        public void load(BinaryReader br)
+        {
+            foreach (Predmet predmet in Podaci)
+            {
+                predmet.load(br);
+            }
         }
     }
 }

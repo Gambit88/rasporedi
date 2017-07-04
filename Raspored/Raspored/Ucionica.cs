@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Raspored
 {
@@ -37,6 +38,28 @@ namespace Raspored
             this.Smart = smart;
             this.Os = os;
             this.Softver = softver;
+        }
+        public void save(BinaryWriter bw)
+        {
+            bw.Write(Oznaka);
+            bw.Write(Opis);
+            bw.Write(BrMesta);
+            bw.Write(Projektor);
+            bw.Write(Tabla);
+            bw.Write(Smart);
+            bw.Write(Os);
+            Softver.save(bw);
+        }
+        public void load(BinaryReader br)
+        {
+            Oznaka = br.ReadString();
+            Opis = br.ReadString();
+            BrMesta = br.ReadInt32();
+            Projektor = br.ReadBoolean();
+            Tabla = br.ReadBoolean();
+            Smart = br.ReadBoolean();
+            Os = br.ReadString();
+            Softver.load(br);
         }
     }
 
