@@ -60,6 +60,7 @@
     <Compile Include="Smerovi.cs" />
     <Compile Include="Softver.cs" />
     <Compile Include="Softveri.cs" />
+    <Compile Include="STime.cs" />
     <Compile Include="Termin.cs" />
     <Compile Include="Termini.cs" />
     <Compile Include="Ucionica.cs" />
