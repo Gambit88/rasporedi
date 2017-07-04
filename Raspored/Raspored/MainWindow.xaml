@@ -7,6 +7,42 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <DockPanel>
+            <DockPanel DockPanel.Dock="Left" MinWidth="100">
+                <DockPanel DockPanel.Dock="Bottom" Height="auto">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Row="0" Grid.Column="0">Dodatni termin</Button>
+                        <Button Grid.Row="1" Grid.Column="0">Podaci</Button>
+                        <Button Grid.Row="2" Grid.Column="0">Novi raspored</Button>
+                        <Button Grid.Row="3" Grid.Column="0">Snimi raspored</Button>
+                        <Button Grid.Row="4" Grid.Column="0">Ucitaj raspored</Button>
+                    </Grid>
+                </DockPanel>
+                <Border BorderThickness="0 0 0 1" BorderBrush="Black">
+                    <DockPanel DockPanel.Dock="Top">
+                        <Button  DockPanel.Dock="Top">
+                            Termini
+                        </Button>
+                        <StackPanel>
+                            
+                        </StackPanel>
+                    </DockPanel>
+                </Border>
+            </DockPanel>
+            <Border BorderThickness="1 0 0 0" BorderBrush="Black">
+                <DockPanel DockPanel.Dock="Right">
+                </DockPanel>
+            </Border>
+        </DockPanel>
     </Grid>
 </Window>
