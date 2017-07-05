@@ -17,7 +17,16 @@ namespace Raspored
         }
         public bool add(string oznaka, string naziv, string opis, string os, string proizvodjac, string sajt, string godinaIzdanja, float cena)
         {
-            if (Podaci.First(item => item.Oznaka == oznaka) != null)
+            Softver s;
+            try
+            {
+                s = Podaci.First(item => item.Oznaka == oznaka);
+            }
+            catch (Exception)
+            {
+                s = null;
+            }
+            if (s == null)
             {
                 Podaci.Add(new Softver( oznaka,  naziv,  opis,  os,  proizvodjac,  sajt,  godinaIzdanja,  cena));
                 return true;

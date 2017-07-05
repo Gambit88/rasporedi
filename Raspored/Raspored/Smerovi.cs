@@ -18,7 +18,16 @@ namespace Raspored
 
         public bool add(string oznaka, string naziv, string opis, DateTime datum)
         {
-            if (Podaci.First(item => item.Oznaka == oznaka) != null)
+            Smer s;
+            try
+            {
+                s = Podaci.First(item => item.Oznaka == oznaka);
+            }
+            catch (Exception)
+            {
+                s = null;
+            }
+            if ( s == null)
             {
                 Podaci.Add(new Smer(oznaka,naziv,opis,datum));
                 return true;

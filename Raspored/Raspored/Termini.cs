@@ -12,16 +12,24 @@ namespace Raspored
         public ObservableCollection<Termin> Podaci { get; set; }
 
         private int Counter = 1;
-        public bool add(int trajanje, DateTime pocetak,Ucionica ucionica)
+        public Termini()
         {
-            Podaci.Add(new Termin(this.Counter, trajanje, pocetak, ucionica));
+            Podaci = new ObservableCollection<Termin>();
+        }
+        public void add(Termin term)
+        {
+            Podaci.Add(term);
+        }
+        public bool add(int trajanje, DateTime pocetak,Ucionica ucionica, string predmet)
+        {
+            Podaci.Add(new Termin(this.Counter, trajanje, pocetak, ucionica,predmet));
             this.Counter++;
             return true;
         }
-        public void edit(int broj, DateTime pocetak, Ucionica ucionica)
+        public void edit(int broj, int trajanje, DateTime pocetak, Ucionica ucionica, string predmet)
         {
             Termin s = Podaci.First(item => item.Broj == broj);
-            s.edit(pocetak,ucionica);
+            s.edit(pocetak,ucionica,trajanje,predmet);
             return;
         }
         public void remove(int broj)
@@ -36,20 +44,23 @@ namespace Raspored
             else
                 return false;
         }
-        public bool slobodan(DateTime vreme)
+        public bool slobodan(DateTime vreme,Ucionica u)
         {
             DateTime endtime;
             foreach (Termin podatak in Podaci)
             {
-                endtime = podatak.Pocetak.AddHours((double)(podatak.Trajanje));
-                if (podatak.Pocetak.CompareTo(vreme) <= 0 && endtime.CompareTo(vreme)>=0)//vece od pocetka manje od kraja
+                if (podatak.Ucionica.Oznaka == u.Oznaka)
                 {
-                    return false;
+                    endtime = podatak.Pocetak.AddHours((double)(podatak.Trajanje));
+                    if (podatak.Pocetak.CompareTo(vreme) <= 0 && endtime.CompareTo(vreme) >= 0)//vece od pocetka manje od kraja
+                    {
+                        return false;
+                    }
                 }
             }
             return true;
         }
-        public bool slobodanZa(DateTime vreme, Termin termin)
+        public bool slobodanZa(DateTime vreme, Termin termin, Ucionica u)
         {
             DateTime pocetno = termin.Pocetak;
             DateTime zavrsno = pocetno.AddHours(termin.Trajanje);
@@ -57,11 +68,32 @@ namespace Raspored
             DateTime zavrsnoPodatak;
             foreach (Termin podatak in Podaci)
             {
-                pocetnoPodatak = podatak.Pocetak;
-                zavrsnoPodatak = podatak.Pocetak.AddHours(podatak.Trajanje);
-                if (pocetnoPodatak <= zavrsno && zavrsnoPodatak >= pocetno)
+                if (podatak.Ucionica.Oznaka == u.Oznaka)
                 {
-                    return false;
+                    pocetnoPodatak = podatak.Pocetak;
+                    zavrsnoPodatak = podatak.Pocetak.AddHours(podatak.Trajanje);
+                    if (pocetnoPodatak <= zavrsno && zavrsnoPodatak >= pocetno)
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+        public bool slobodnaUcionica(Ucionica u)
+        {
+            DateTime dt = DateTime.Now;
+            DateTime pocetnoPodatak;
+            DateTime zavrsnoPodatak;
+            foreach (Termin podatak in Podaci)
+            {
+                if (podatak.Ucionica.Oznaka == u.Oznaka) { 
+                    pocetnoPodatak = podatak.Pocetak;
+                    zavrsnoPodatak = podatak.Pocetak.AddHours(podatak.Trajanje);
+                    if (pocetnoPodatak <= dt && zavrsnoPodatak >= dt)
+                    {
+                        return false;
+                    }
                 }
             }
             return true;

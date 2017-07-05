@@ -17,7 +17,16 @@ namespace Raspored
         }
         public bool add(string oznaka, string opis, int brMesta, bool projektor, bool tabla, bool smart, string os, Softveri softver)
         {
-            if (Podaci.First(item => item.Oznaka == oznaka) != null)
+            Ucionica s;
+            try
+            {
+                s = Podaci.First(item => item.Oznaka == oznaka);
+            }
+            catch (Exception)
+            {
+                s = null;
+            }
+            if (s == null)
             {
                 Podaci.Add(new Ucionica(oznaka, opis, brMesta, projektor, tabla, smart, os, softver));
                 return true;

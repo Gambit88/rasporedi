@@ -16,7 +16,16 @@ namespace Raspored
         }
         public bool add(string oznaka, string naziv, string opis, Smer smer, int velicinaGrupe, int brCasovaMin, int brTermina, bool projektor, bool tabla, bool smart, string os, Softveri softveri)
         {
-            if (Podaci.First(item => item.Oznaka == oznaka) != null)
+            Predmet s; 
+            try
+            {
+                s = Podaci.First(item => item.Oznaka == oznaka);
+            }
+            catch (Exception)
+            {
+                s = null;
+            }
+            if (s == null)
             {
                 Podaci.Add(new Predmet(oznaka, naziv, opis, smer, velicinaGrupe, brCasovaMin, brTermina, projektor, tabla, smart, os, softveri));
                 return true;
