@@ -11,6 +11,11 @@ namespace Raspored
     {
         public ObservableCollection<Smer> Podaci { get; set; }
 
+        public Smerovi()
+        {
+            Podaci = new ObservableCollection<Smer>();
+        }
+
         public bool add(string oznaka, string naziv, string opis, DateTime datum)
         {
             if (Podaci.First(item => item.Oznaka == oznaka) != null)

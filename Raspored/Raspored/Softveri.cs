@@ -10,6 +10,11 @@ namespace Raspored
     class Softveri
     {
         public ObservableCollection<Softver> Podaci { get; set; }
+
+        public Softveri()
+        {
+            Podaci = new ObservableCollection<Softver>();
+        }
         public bool add(string oznaka, string naziv, string opis, string os, string proizvodjac, string sajt, string godinaIzdanja, float cena)
         {
             if (Podaci.First(item => item.Oznaka == oznaka) != null)

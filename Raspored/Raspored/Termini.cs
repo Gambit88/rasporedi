@@ -10,16 +10,13 @@ namespace Raspored
     class Termini
     {
         public ObservableCollection<Termin> Podaci { get; set; }
-        private int counter = 1;
-        public bool add(int broj, int trajanje, DateTime pocetak,Ucionica ucionica)
-        {
-            if (Podaci.First(item => item.Broj == broj) != null)
-            {
 
-                Podaci.Add(new Termin(broj, trajanje, pocetak, ucionica));
-                return true;
-            }
-            return false;
+        private int Counter = 1;
+        public bool add(int trajanje, DateTime pocetak,Ucionica ucionica)
+        {
+            Podaci.Add(new Termin(this.Counter, trajanje, pocetak, ucionica));
+            this.Counter++;
+            return true;
         }
         public void edit(int broj, DateTime pocetak, Ucionica ucionica)
         {

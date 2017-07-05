@@ -6,9 +6,12 @@
         xmlns:local="clr-namespace:Raspored"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        <DockPanel>
-            <DockPanel DockPanel.Dock="Left" MinWidth="100">
+    <DockPanel>
+        <DockPanel DockPanel.Dock="Left" MinWidth="100">
+            <!-- LEVI PANEL -->
+            <!-- POCETAK DELA ZA RASPORED (DJORDJE) -->
+            <!-- KADA NE ZELITE DA SE PRIKAZE UKUCATE JOS Visibility="Collapsed" -->
+            <DockPanel x:Name="rasporedLeviDeoPanel" DockPanel.Dock="Top" >
                 <DockPanel DockPanel.Dock="Bottom" Height="auto">
                     <Grid>
                         <Grid.RowDefinitions>
@@ -30,19 +33,256 @@
                 </DockPanel>
                 <Border BorderThickness="0 0 0 1" BorderBrush="Black">
                     <DockPanel DockPanel.Dock="Top">
-                        <Button  DockPanel.Dock="Top">
-                            Termini
-                        </Button>
-                        <StackPanel>
-                            
+                        <StackPanel  DockPanel.Dock="Top" Background="LightGray">
+                            <TextBlock HorizontalAlignment="Center">Termini</TextBlock>
                         </StackPanel>
+                        <Canvas x:Name="kanvas">
+
+                        </Canvas>
                     </DockPanel>
                 </Border>
             </DockPanel>
-            <Border BorderThickness="1 0 0 0" BorderBrush="Black">
-                <DockPanel DockPanel.Dock="Right">
-                </DockPanel>
-            </Border>
+            <!-- KRAJ DELA ZA RASPORED (DJORDJE) -->
+
+            <!-- DEO ZA NOVI RASPORED (DJORDJE) -->
+            <!-- KADA NE ZELITE DA SE PRIKAZE UKUCATE JOS Visibility="Collapsed" -->
+            <DockPanel x:Name="rasporedNoviLeviDeoPanel" Visibility="Collapsed" DockPanel.Dock="Top">
+            </DockPanel>
+            <!-- KRAJ DELA ZA NOVI RASPORED (DJORDJE)-->
+
+            <!-- DEO ZA NOVI TERMIN (MIRA/NIKOLA) -->
+            <!-- KADA NE ZELITE DA SE PRIKAZE UKUCATE JOS Visibility="Collapsed" -->
+            <DockPanel x:Name="noviTerminLeviDeoPanel" Visibility="Collapsed" DockPanel.Dock="Top">
+            </DockPanel>
+            <!-- KRAJ DELA ZA NOVI TERMIN (MIRA/NIKOLA) -->
+
+            <!-- DEO ZA TABELU SOFTVERA (MIRA/NIKOLA) -->
+            <!-- KADA NE ZELITE DA SE PRIKAZE UKUCATE JOS Visibility="Collapsed" -->
+            <DockPanel x:Name="tabelaSoftveraLeviDeoPanel" Visibility="Collapsed" DockPanel.Dock="Top">
+            </DockPanel>
+            <!-- KRAJ DELA ZA TABELU SOFTVERA (MIRA/NIKOLA) -->
+
+            <!-- DEO ZA TABELU UCIONICA (MIRA/NIKOLA) -->
+            <!-- KADA NE ZELITE DA SE PRIKAZE UKUCATE JOS Visibility="Collapsed" -->
+            <DockPanel x:Name="tabelaUcionicaLeviDeoPanel" Visibility="Collapsed" DockPanel.Dock="Top">
+            </DockPanel>
+            <!-- KRAJ DELA ZA TABELU UCIONICA (MIRA/NIKOLA) -->
+
+            <!-- DEO ZA TABELU SMEROVA (MIRA/NIKOLA) -->
+            <!-- KADA NE ZELITE DA SE PRIKAZE UKUCATE JOS Visibility="Collapsed" -->
+            <DockPanel x:Name="tabelaSmerovaLeviDeoPanel" Visibility="Collapsed" DockPanel.Dock="Top">
+            </DockPanel>
+            <!-- KRAJ DELA ZA TABELU SMEROVA (MIRA/NIKOLA) -->
+
+            <!-- DEO ZA TABELU PREDMETA (MIRA/NIKOLA) -->
+            <!-- KADA NE ZELITE DA SE PRIKAZE UKUCATE JOS Visibility="Collapsed" -->
+            <DockPanel x:Name="tabelaPredmetaLeviDeoPanel" Visibility="Collapsed" DockPanel.Dock="Top">
+            </DockPanel>
+            <!-- KRAJ DELA ZA TABELU PREDMETA (MIRA/NIKOLA) -->
+
+            <!-- NE DIRATI ISPOD, KRAJ LEVOG DELA -->
         </DockPanel>
-    </Grid>
+        <Border BorderThickness="1 0 0 0" BorderBrush="Black">
+
+            <!-- DESNI PANEL -->
+            <DockPanel DockPanel.Dock="Right">
+                <!-- DESNI DEO ZA RASPORED (DJORDJE) -->
+                <!-- KADA NE ZELITE DA SE PRIKAZE UKUCATE JOS Visibility="Collapsed" -->
+                <DockPanel x:Name="rasporedDesniDeoPanel" DockPanel.Dock="Top" >
+                    <WrapPanel DockPanel.Dock="Top" x:Name="classList" >
+                        <ItemsControl Name="classroomList">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel />
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Button MinHeight="50" MaxHeight="50" MinWidth="80" MaxWidth="80" Content="{Binding Oznaka}" Click="Button_Click_1" Background="DarkGray"></Button>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </WrapPanel>
+                    <Grid DockPanel.Dock="Top" MaxHeight="50" Height="50" Width="auto" x:Name="daysGrid" Visibility="Collapsed">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Button MinHeight="50" MaxHeight="50" Grid.Row="0" Grid.Column="0" Click="Button_Click" Background="DarkGray">PON</Button>
+                        <Button MinHeight="50" MaxHeight="50" Grid.Row="0" Grid.Column="1" Click="Button_Click" Background="DarkGray">UTO</Button>
+                        <Button MinHeight="50" MaxHeight="50" Grid.Row="0" Grid.Column="2" Click="Button_Click" Background="DarkGray">SRE</Button>
+                        <Button MinHeight="50" MaxHeight="50" Grid.Row="0" Grid.Column="3" Click="Button_Click" Background="DarkGray">ČET</Button>
+                        <Button MinHeight="50" MaxHeight="50" Grid.Row="0" Grid.Column="4" Click="Button_Click" Background="DarkGray">PET</Button>
+                        <Button MinHeight="50" MaxHeight="50" Grid.Row="0" Grid.Column="5" Click="Button_Click" Background="DarkGray">SUB</Button>
+                    </Grid>
+                    <Grid DockPanel.Dock="Bottom" Visibility="Collapsed" x:Name="raspored">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="25" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="25" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="20" BorderThickness="0 5 0 5" BorderBrush="Black"></Border>
+                        <TextBlock  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center">7:00</TextBlock>
+                        <TextBlock  Grid.Row="0" Grid.Column="4" Grid.ColumnSpan="2" VerticalAlignment="Center">8:00</TextBlock>
+                        <TextBlock  Grid.Row="0" Grid.Column="8" Grid.ColumnSpan="2" VerticalAlignment="Center">9:00</TextBlock>
+                        <TextBlock  Grid.Row="0" Grid.Column="12" Grid.ColumnSpan="2" VerticalAlignment="Center">10:00</TextBlock>
+                        <TextBlock  Grid.Row="0" Grid.Column="16" Grid.ColumnSpan="2" VerticalAlignment="Center">11:00</TextBlock>
+                        <TextBlock  Grid.Row="0" Grid.Column="18" Grid.ColumnSpan="2" HorizontalAlignment="Right" VerticalAlignment="Center">12:00</TextBlock>
+
+                        <Border Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="20" BorderThickness="0 5 0 5" BorderBrush="Black"></Border>
+                        <TextBlock  Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center">12:00</TextBlock>
+                        <TextBlock  Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="2" VerticalAlignment="Center">13:00</TextBlock>
+                        <TextBlock  Grid.Row="2" Grid.Column="8" Grid.ColumnSpan="2" VerticalAlignment="Center">14:00</TextBlock>
+                        <TextBlock  Grid.Row="2" Grid.Column="12" Grid.ColumnSpan="2" VerticalAlignment="Center">15:00</TextBlock>
+                        <TextBlock  Grid.Row="2" Grid.Column="16" Grid.ColumnSpan="2" VerticalAlignment="Center">16:00</TextBlock>
+                        <TextBlock  Grid.Row="2" Grid.Column="18" Grid.ColumnSpan="2" HorizontalAlignment="Right" VerticalAlignment="Center">17:00</TextBlock>
+
+                        <Border Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="20" BorderThickness="0 5 0 5" BorderBrush="Black"></Border>
+                        <TextBlock  Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center">17:00</TextBlock>
+                        <TextBlock  Grid.Row="4" Grid.Column="4" Grid.ColumnSpan="2" VerticalAlignment="Center">18:00</TextBlock>
+                        <TextBlock  Grid.Row="4" Grid.Column="8" Grid.ColumnSpan="2" VerticalAlignment="Center">19:00</TextBlock>
+                        <TextBlock  Grid.Row="4" Grid.Column="12" Grid.ColumnSpan="2" VerticalAlignment="Center">20:00</TextBlock>
+                        <TextBlock  Grid.Row="4" Grid.Column="16" Grid.ColumnSpan="2" VerticalAlignment="Center">21:00</TextBlock>
+                        <TextBlock  Grid.Row="4" Grid.Column="18" Grid.ColumnSpan="2" HorizontalAlignment="Right" VerticalAlignment="Center">22:00</TextBlock>
+
+                        <Border Grid.Row="1" Grid.Column="0" BorderThickness="3 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="1" Grid.Column="1" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="1" Grid.Column="2" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="1" Grid.Column="3" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="1" Grid.Column="4" BorderThickness="3 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="1" Grid.Column="5" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="1" Grid.Column="6" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="1" Grid.Column="7" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="1" Grid.Column="8" BorderThickness="3 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="1" Grid.Column="9" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="1" Grid.Column="10" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="1" Grid.Column="11" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="1" Grid.Column="12" BorderThickness="3 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="1" Grid.Column="13" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="1" Grid.Column="14" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="1" Grid.Column="15" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="1" Grid.Column="16" BorderThickness="3 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="1" Grid.Column="17" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="1" Grid.Column="18" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="1" Grid.Column="19" BorderThickness="1 0 3 0" BorderBrush="Black"></Border>
+
+                        <Border Grid.Row="3" Grid.Column="0" BorderThickness="3 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="3" Grid.Column="1" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="3" Grid.Column="2" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="3" Grid.Column="3" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="3" Grid.Column="4" BorderThickness="3 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="3" Grid.Column="5" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="3" Grid.Column="6" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="3" Grid.Column="7" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="3" Grid.Column="8" BorderThickness="3 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="3" Grid.Column="9" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="3" Grid.Column="10" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="3" Grid.Column="11" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="3" Grid.Column="12" BorderThickness="3 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="3" Grid.Column="13" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="3" Grid.Column="14" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="3" Grid.Column="15" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="3" Grid.Column="16" BorderThickness="3 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="3" Grid.Column="17" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="3" Grid.Column="18" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="3" Grid.Column="19" BorderThickness="1 0 3 0" BorderBrush="Black"></Border>
+
+                        <Border Grid.Row="5" Grid.Column="0" BorderThickness="3 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="5" Grid.Column="1" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="5" Grid.Column="2" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="5" Grid.Column="3" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="5" Grid.Column="4" BorderThickness="3 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="5" Grid.Column="5" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="5" Grid.Column="6" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="5" Grid.Column="7" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="5" Grid.Column="8" BorderThickness="3 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="5" Grid.Column="9" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="5" Grid.Column="10" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="5" Grid.Column="11" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="5" Grid.Column="12" BorderThickness="3 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="5" Grid.Column="13" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="5" Grid.Column="14" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="5" Grid.Column="15" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="5" Grid.Column="16" BorderThickness="3 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="5" Grid.Column="17" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="5" Grid.Column="18" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
+                        <Border Grid.Row="5" Grid.Column="19" BorderThickness="1 0 3 0" BorderBrush="Black"></Border>
+
+                    </Grid>
+                </DockPanel>
+                <!-- KRAJ RASPOREDA (DJORDJE) -->
+
+                <!-- DEO ZA NOVI RASPORED (DJORDJE) -->
+                <!-- KADA NE ZELITE DA SE PRIKAZE UKUCATE JOS Visibility="Collapsed" -->
+                <DockPanel x:Name="rasporedNoviDesniDeoPanel" Visibility="Collapsed" DockPanel.Dock="Top">
+                </DockPanel>
+                <!-- KRAJ DELA ZA NOVI RASPORED (DJORDJE)-->
+
+                <!-- DEO ZA NOVI TERMIN (MIRA/NIKOLA) -->
+                <!-- KADA NE ZELITE DA SE PRIKAZE UKUCATE JOS Visibility="Collapsed" -->
+                <DockPanel x:Name="noviTerminDesniDeoPanel" Visibility="Collapsed" DockPanel.Dock="Top">
+                </DockPanel>
+                <!-- KRAJ DELA ZA NOVI TERMIN (MIRA/NIKOLA) -->
+
+                <!-- DEO ZA TABELU SOFTVERA (MIRA/NIKOLA) -->
+                <!-- KADA NE ZELITE DA SE PRIKAZE UKUCATE JOS Visibility="Collapsed" -->
+                <DockPanel x:Name="tabelaSoftveraDesniDeoPanel" Visibility="Collapsed" DockPanel.Dock="Top">
+                </DockPanel>
+                <!-- KRAJ DELA ZA TABELU SOFTVERA (MIRA/NIKOLA) -->
+
+                <!-- DEO ZA TABELU UCIONICA (MIRA/NIKOLA) -->
+                <!-- KADA NE ZELITE DA SE PRIKAZE UKUCATE JOS Visibility="Collapsed" -->
+                <DockPanel x:Name="tabelaUcionicaDesniDeoPanel" Visibility="Collapsed" DockPanel.Dock="Top">
+                </DockPanel>
+                <!-- KRAJ DELA ZA TABELU UCIONICA (MIRA/NIKOLA) -->
+
+                <!-- DEO ZA TABELU SMEROVA (MIRA/NIKOLA) -->
+                <!-- KADA NE ZELITE DA SE PRIKAZE UKUCATE JOS Visibility="Collapsed" -->
+                <DockPanel x:Name="tabelaSmerovaDesniDeoPanel" Visibility="Collapsed" DockPanel.Dock="Top">
+                </DockPanel>
+                <!-- KRAJ DELA ZA TABELU SMEROVA (MIRA/NIKOLA) -->
+
+                <!-- DEO ZA TABELU PREDMETA (MIRA/NIKOLA) -->
+                <!-- KADA NE ZELITE DA SE PRIKAZE UKUCATE JOS Visibility="Collapsed" -->
+                <DockPanel x:Name="tabelaPredmetaDesniDeoPanel" Visibility="Collapsed" DockPanel.Dock="Top">
+                </DockPanel>
+                <!-- KRAJ DELA ZA TABELU PREDMETA (MIRA/NIKOLA) -->
+                
+                <!-- KRAJ DESNOG DELA NE DIRATI ISPOD-->
+            </DockPanel>
+        </Border>
+    </DockPanel>
 </Window>

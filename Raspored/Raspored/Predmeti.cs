@@ -10,6 +10,10 @@ namespace Raspored
     class Predmeti
     {
         public ObservableCollection <Predmet> Podaci { get; set; }
+        public Predmeti()
+        {
+            Podaci = new ObservableCollection<Predmet>();
+        }
         public bool add(string oznaka, string naziv, string opis, Smer smer, int velicinaGrupe, int brCasovaMin, int brTermina, bool projektor, bool tabla, bool smart, string os, Softveri softveri)
         {
             if (Podaci.First(item => item.Oznaka == oznaka) != null)

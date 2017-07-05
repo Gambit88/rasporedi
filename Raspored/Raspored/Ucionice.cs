@@ -10,6 +10,11 @@ namespace Raspored
     class Ucionice
     {
         public ObservableCollection<Ucionica> Podaci { get; set; }
+
+        public Ucionice()
+        {
+            Podaci = new ObservableCollection<Raspored.Ucionica>();
+        }
         public bool add(string oznaka, string opis, int brMesta, bool projektor, bool tabla, bool smart, string os, Softveri softver)
         {
             if (Podaci.First(item => item.Oznaka == oznaka) != null)
