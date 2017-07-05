@@ -5,78 +5,82 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Raspored"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="525" MinHeight="350" MinWidth="525">
     <DockPanel>
+        <!-- LEVI PANEL -->
         <DockPanel DockPanel.Dock="Left" MinWidth="100">
-            <!-- LEVI PANEL -->
+        <Border BorderThickness="0 0 0 1" BorderBrush="Black" >
+        </Border>
             <!-- POCETAK DELA ZA RASPORED (DJORDJE) -->
             <!-- KADA NE ZELITE DA SE PRIKAZE UKUCATE JOS Visibility="Collapsed" -->
-            <DockPanel x:Name="rasporedLeviDeoPanel" DockPanel.Dock="Top" >
-                <DockPanel DockPanel.Dock="Bottom" Height="auto">
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
-                        <Button Grid.Row="0" Grid.Column="0">Dodatni termin</Button>
-                        <Button Grid.Row="1" Grid.Column="0">Podaci</Button>
-                        <Button Grid.Row="2" Grid.Column="0">Novi raspored</Button>
-                        <Button Grid.Row="3" Grid.Column="0">Snimi raspored</Button>
-                        <Button Grid.Row="4" Grid.Column="0">Ucitaj raspored</Button>
-                    </Grid>
-                </DockPanel>
-                <Border BorderThickness="0 0 0 1" BorderBrush="Black">
-                    <DockPanel DockPanel.Dock="Top">
-                        <StackPanel  DockPanel.Dock="Top" Background="LightGray">
-                            <TextBlock HorizontalAlignment="Center">Termini</TextBlock>
-                        </StackPanel>
-                        <Canvas x:Name="kanvas">
+            <Grid x:Name="rasporedLeviDeoPanel" Width="100">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*" MinHeight="200"/>
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0" Grid.Row="2" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Row="0" Grid.Column="0">Dodatni termin</Button>
+                    <Button Grid.Row="1" Grid.Column="0">Podaci</Button>
+                    <Button Grid.Row="2" Grid.Column="0">Novi raspored</Button>
+                    <Button Grid.Row="3" Grid.Column="0">Snimi raspored</Button>
+                    <Button Grid.Row="4" Grid.Column="0">Ucitaj raspored</Button>
+                </Grid>
+                <StackPanel  Grid.Column="0" Grid.Row="0" Background="LightGray">
+                    <TextBlock HorizontalAlignment="Center">Termini</TextBlock>
+                </StackPanel>
+                <Canvas x:Name="kanvas" Grid.Column="0" Grid.Row="1" >
 
-                        </Canvas>
-                    </DockPanel>
-                </Border>
-            </DockPanel>
+                </Canvas>
+            </Grid>
             <!-- KRAJ DELA ZA RASPORED (DJORDJE) -->
 
             <!-- DEO ZA NOVI RASPORED (DJORDJE) -->
             <!-- KADA NE ZELITE DA SE PRIKAZE UKUCATE JOS Visibility="Collapsed" -->
-            <DockPanel x:Name="rasporedNoviLeviDeoPanel" Visibility="Collapsed" DockPanel.Dock="Top">
+            <DockPanel x:Name="rasporedNoviLeviDeoPanel" Visibility="Collapsed" Width="100">
             </DockPanel>
             <!-- KRAJ DELA ZA NOVI RASPORED (DJORDJE)-->
 
             <!-- DEO ZA NOVI TERMIN (MIRA/NIKOLA) -->
             <!-- KADA NE ZELITE DA SE PRIKAZE UKUCATE JOS Visibility="Collapsed" -->
-            <DockPanel x:Name="noviTerminLeviDeoPanel" Visibility="Collapsed" DockPanel.Dock="Top">
+            <DockPanel x:Name="noviTerminLeviDeoPanel" Visibility="Collapsed" Width="100">
             </DockPanel>
             <!-- KRAJ DELA ZA NOVI TERMIN (MIRA/NIKOLA) -->
 
             <!-- DEO ZA TABELU SOFTVERA (MIRA/NIKOLA) -->
             <!-- KADA NE ZELITE DA SE PRIKAZE UKUCATE JOS Visibility="Collapsed" -->
-            <DockPanel x:Name="tabelaSoftveraLeviDeoPanel" Visibility="Collapsed" DockPanel.Dock="Top">
+            <DockPanel x:Name="tabelaSoftveraLeviDeoPanel" Visibility="Collapsed" Width="100">
             </DockPanel>
             <!-- KRAJ DELA ZA TABELU SOFTVERA (MIRA/NIKOLA) -->
 
             <!-- DEO ZA TABELU UCIONICA (MIRA/NIKOLA) -->
             <!-- KADA NE ZELITE DA SE PRIKAZE UKUCATE JOS Visibility="Collapsed" -->
-            <DockPanel x:Name="tabelaUcionicaLeviDeoPanel" Visibility="Collapsed" DockPanel.Dock="Top">
+            <DockPanel x:Name="tabelaUcionicaLeviDeoPanel" Visibility="Collapsed" Width="100">
             </DockPanel>
             <!-- KRAJ DELA ZA TABELU UCIONICA (MIRA/NIKOLA) -->
 
             <!-- DEO ZA TABELU SMEROVA (MIRA/NIKOLA) -->
             <!-- KADA NE ZELITE DA SE PRIKAZE UKUCATE JOS Visibility="Collapsed" -->
-            <DockPanel x:Name="tabelaSmerovaLeviDeoPanel" Visibility="Collapsed" DockPanel.Dock="Top">
+            <DockPanel x:Name="tabelaSmerovaLeviDeoPanel" Visibility="Collapsed" Width="100">
             </DockPanel>
             <!-- KRAJ DELA ZA TABELU SMEROVA (MIRA/NIKOLA) -->
 
             <!-- DEO ZA TABELU PREDMETA (MIRA/NIKOLA) -->
             <!-- KADA NE ZELITE DA SE PRIKAZE UKUCATE JOS Visibility="Collapsed" -->
-            <DockPanel x:Name="tabelaPredmetaLeviDeoPanel" Visibility="Collapsed" DockPanel.Dock="Top">
+            <DockPanel x:Name="tabelaPredmetaLeviDeoPanel" Visibility="Collapsed" Width="100">
             </DockPanel>
             <!-- KRAJ DELA ZA TABELU PREDMETA (MIRA/NIKOLA) -->
 
@@ -125,33 +129,34 @@
                     <Grid DockPanel.Dock="Bottom" Visibility="Collapsed" x:Name="raspored">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="25" />
-                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" MinHeight="40"/>
                             <RowDefinition Height="25" />
-                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" MinHeight="40"/>
                             <RowDefinition Height="25" />
-                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" MinHeight="40"/>
+                            <RowDefinition Height="25" />
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" MinWidth="15"/>
+                            <ColumnDefinition Width="*" MinWidth="15"/>
+                            <ColumnDefinition Width="*" MinWidth="15"/>
+                            <ColumnDefinition Width="*" MinWidth="15"/>
+                            <ColumnDefinition Width="*" MinWidth="15"/>
+                            <ColumnDefinition Width="*" MinWidth="15"/>
+                            <ColumnDefinition Width="*" MinWidth="15"/>
+                            <ColumnDefinition Width="*" MinWidth="15"/>
+                            <ColumnDefinition Width="*" MinWidth="15"/>
+                            <ColumnDefinition Width="*" MinWidth="15"/>
+                            <ColumnDefinition Width="*" MinWidth="15"/>
+                            <ColumnDefinition Width="*" MinWidth="15"/>
+                            <ColumnDefinition Width="*" MinWidth="15"/>
+                            <ColumnDefinition Width="*" MinWidth="15"/>
+                            <ColumnDefinition Width="*" MinWidth="15"/>
+                            <ColumnDefinition Width="*" MinWidth="15"/>
+                            <ColumnDefinition Width="*" MinWidth="15"/>
+                            <ColumnDefinition Width="*" MinWidth="15"/>
+                            <ColumnDefinition Width="*" MinWidth="15"/>
+                            <ColumnDefinition Width="*" MinWidth="15"/>
                         </Grid.ColumnDefinitions>
 
                         <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="20" BorderThickness="0 5 0 5" BorderBrush="Black"></Border>
@@ -177,6 +182,8 @@
                         <TextBlock  Grid.Row="4" Grid.Column="12" Grid.ColumnSpan="2" VerticalAlignment="Center">20:00</TextBlock>
                         <TextBlock  Grid.Row="4" Grid.Column="16" Grid.ColumnSpan="2" VerticalAlignment="Center">21:00</TextBlock>
                         <TextBlock  Grid.Row="4" Grid.Column="18" Grid.ColumnSpan="2" HorizontalAlignment="Right" VerticalAlignment="Center">22:00</TextBlock>
+
+                        <Border Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="20" BorderThickness="0 5 0 0" BorderBrush="Black"></Border>
 
                         <Border Grid.Row="1" Grid.Column="0" BorderThickness="3 0 1 0" BorderBrush="Black"></Border>
                         <Border Grid.Row="1" Grid.Column="1" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
@@ -280,7 +287,7 @@
                 <DockPanel x:Name="tabelaPredmetaDesniDeoPanel" Visibility="Collapsed" DockPanel.Dock="Top">
                 </DockPanel>
                 <!-- KRAJ DELA ZA TABELU PREDMETA (MIRA/NIKOLA) -->
-                
+
                 <!-- KRAJ DESNOG DELA NE DIRATI ISPOD-->
             </DockPanel>
         </Border>
