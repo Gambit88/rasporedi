@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using System.Collections.ObjectModel;
 
 namespace Raspored
 {
@@ -37,6 +38,8 @@ namespace Raspored
         Predmeti predmeti = new Predmeti();
         string selektovanaUcionica = "";
         int selektovaniDan = 0;
+        public ObservableCollection<Softver> softvers { get; set; }
+
         public MainWindow()
         {
             //ucionice
@@ -47,14 +50,17 @@ namespace Raspored
             //predmeti
 
             InitializeComponent();
+            this.DataContext = this;
+            softvers = new ObservableCollection<Softver>();
 
             DispatcherTimer timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromMinutes(1);
             timer.Tick += DispatcherTimer_Tick;
             timer.Start();
-
+            
             smerovi.add("A", "ASD", "asdasdasd", DateTime.Now);
             softver.add("VS2015", "Visual studio 2015", "Blablabla", "Windows", "Microsoft", "www.microsoft.com", "2014", 20000);
+            
             ucionice.add("A1", "Za HCI", 2, false, false, false, "Windows", softver);
             ucionice.add("A2", "Za HCI", 2, false, true, false, "Windows", softver);
             ucionice.add("A3", "Za HCI", 2, false, false, true, "Windows", softver);
@@ -66,6 +72,11 @@ namespace Raspored
             terminiNeaktivni.add(2, DateTime.Now, null, "P12");
             terminiNeaktivni.add(4, DateTime.Now, null, "P12");
             terminiNeaktivni.add(3, DateTime.Now, null, "P13");
+
+            foreach (var item in softver.Podaci)
+            {
+                softvers.Add(item);
+            }
 
             classroomList.ItemsSource = ucionice.Podaci;
             terminiZaOdraditi.ItemsSource = terminiNeaktivni.Podaci;
@@ -599,6 +610,7 @@ namespace Raspored
             tabelaUcionicaDesniDeoPanel.Visibility = Visibility.Collapsed;
             tabelaSmerovaDesniDeoPanel.Visibility = Visibility.Collapsed;
             tabelaPredmetaDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaDodajSoftverDesniDeoPanel.Visibility = Visibility.Collapsed;
 
             tabelaSoftveraLeviDeoPanel.Visibility = Visibility.Visible;
             tabelaSoftveraDesniDeoPanel.Visibility = Visibility.Visible;

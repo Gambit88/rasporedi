@@ -465,7 +465,18 @@
                 <!-- DEO ZA TABELU SOFTVERA (MIRA/NIKOLA) -->
                 <!-- KADA NE ZELITE DA SE PRIKAZE UKUCATE JOS Visibility="Collapsed" -->
                 <DockPanel x:Name="tabelaSoftveraDesniDeoPanel" Visibility="Collapsed" >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <DataGrid x:Name="dgrMain" ItemsSource="{Binding Path=softvers}" IsReadOnly="False" />
+                    </Grid>
                 </DockPanel>
+                <!-- KRAJ DELA ZA TABELU SOFTVERA (MIRA/NIKOLA) -->
                 <DockPanel x:Name="tabelaDodajSoftverDesniDeoPanel" Visibility="Collapsed" >
                     <Grid>
                         <Grid.RowDefinitions>
@@ -502,7 +513,7 @@
                         <Button Grid.ColumnSpan="2" Grid.Row="8">Dodaj</Button>
                     </Grid>
                 </DockPanel>
-                <!-- KRAJ DELA ZA TABELU SOFTVERA (MIRA/NIKOLA) -->
+               
 
                 <!-- DEO ZA TABELU UCIONICA (MIRA/NIKOLA) -->
                 <!-- KADA NE ZELITE DA SE PRIKAZE UKUCATE JOS Visibility="Collapsed" -->
