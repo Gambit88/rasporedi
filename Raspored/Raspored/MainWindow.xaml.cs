@@ -585,5 +585,13 @@ namespace Raspored
             iskljuciBoje();
             obojiRaspored();
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            rasporedLeviDeoPanel.Visibility = Visibility.Collapsed;
+            rasporedNoviDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaSoftveraLeviDeoPanel.Visibility = Visibility.Visible;
+            tabelaSoftveraDesniDeoPanel.Visibility = Visibility.Visible;
+        }
     }
 }
