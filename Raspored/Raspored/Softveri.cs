@@ -62,6 +62,14 @@ namespace Raspored
                 softver.load(br);
             }
         }
-
+        public override string ToString()
+        {
+            string podaci = "";
+            foreach (var item in this.Podaci)
+            {
+                podaci = podaci + item.Naziv + " ";
+            }
+            return podaci;
+        }
     }
 }

@@ -108,5 +108,9 @@ namespace Raspored
             Opis = br.ReadString();
             Datum = DateTime.FromBinary(br.ReadInt64());
         }
+        public override string ToString()
+        {
+            return this.Oznaka;
+        }
     }
 }
