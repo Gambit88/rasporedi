@@ -4,19 +4,128 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.ComponentModel;
 
 namespace Raspored
 {
-    class Ucionica
+    class Ucionica : INotifyPropertyChanged
     {
-        public string Oznaka { get; set; }
-        public string Opis { get; set; }
-        public int BrMesta { get; set; }
-        public bool Projektor { get; set; }
-        public bool Tabla { get; set; }
-        public bool Smart { get; set; }
-        public string Os { get; set; }
-        public Softveri Softver { get; set; }
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected virtual void OnPropertyChanged(string name)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(name));
+            }
+        }
+
+        private string _Oznaka;
+        private string _Opis;
+        private int _BrMesta;
+        private bool _Projektor;
+        private bool _Tabla;
+        private bool _Smart;
+        private string _Os;
+        private Softveri _Softver;
+
+        public string Oznaka
+        {
+            get { return _Oznaka; }
+            set
+            {
+                if (value != _Oznaka)
+                {
+                    _Oznaka = value;
+                    OnPropertyChanged("Oznaka");
+                }
+            }
+        }
+        public string Opis
+        {
+            get { return _Opis; }
+            set
+            {
+                if (value != _Opis)
+                {
+                    _Opis = value;
+                    OnPropertyChanged("Opis");
+                }
+            }
+        }
+        public int BrMesta
+        {
+            get { return _BrMesta; }
+            set
+            {
+                if (value != _BrMesta)
+                {
+                    _BrMesta = value;
+                    OnPropertyChanged("BrMesta");
+                }
+            }
+        }
+        public bool Projektor
+        {
+            get { return _Projektor; }
+            set
+            {
+                if (value != _Projektor)
+                {
+                    _Projektor = value;
+                    OnPropertyChanged("Projektor");
+                }
+            }
+        }
+        public bool Tabla
+        {
+            get { return _Tabla; }
+            set
+            {
+                if (value != _Tabla)
+                {
+                    _Tabla = value;
+                    OnPropertyChanged("Tabla");
+                }
+            }
+        }
+        public bool Smart
+        {
+            get { return _Smart; }
+            set
+            {
+                if (value != _Smart)
+                {
+                    _Smart = value;
+                    OnPropertyChanged("Smart");
+                }
+            }
+        }
+        public string Os
+        {
+            get { return _Os; }
+            set
+            {
+                if (value != _Os)
+                {
+                    _Os = value;
+                    OnPropertyChanged("Os");
+                }
+            }
+        }
+
+        public Softveri Softver
+        {
+            get { return _Softver; }
+            set
+            {
+                if (value != _Softver)
+                {
+                    _Softver = value;
+                    OnPropertyChanged("Softver");
+                }
+            }
+        }
+
 
         public Ucionica(string oznaka, string opis, int brMesta, bool projektor, bool tabla, bool smart, string os, Softveri softver)
         {
@@ -67,7 +176,7 @@ namespace Raspored
             {
                 return false;
             }
-            if (p.Projektor==true && this.Projektor == false)
+            if (p.Projektor == true && this.Projektor == false)
             {
                 return false;
             }
@@ -79,7 +188,7 @@ namespace Raspored
             {
                 return false;
             }
-            foreach(Softver s in p.Softver.Podaci)
+            foreach (Softver s in p.Softver.Podaci)
             {
                 if (Softver.Podaci.Contains(s))
                 {

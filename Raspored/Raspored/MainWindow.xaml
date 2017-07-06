@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Raspored"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525" MinHeight="350" MinWidth="525">
+        Title="MainWindow" Height="360" Width="525" MinHeight="350" MinWidth="525">
     <DockPanel>
         <!-- LEVI PANEL -->
         <DockPanel DockPanel.Dock="Left" MinWidth="100">
@@ -34,7 +34,7 @@
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
                     <Button Grid.Row="0" Grid.Column="0">Dodatni termin</Button>
-                    <Button Grid.Row="1" Grid.Column="0">Podaci</Button>
+                    <Button Grid.Row="1" Grid.Column="0" Click="Button_Click_3" x:Name="Podaci">Podaci</Button>
                     <Button Grid.Row="2" Grid.Column="0">Novi raspored</Button>
                     <Button Grid.Row="3" Grid.Column="0">Snimi raspored</Button>
                     <Button Grid.Row="4" Grid.Column="0">Ucitaj raspored</Button>
@@ -76,24 +76,144 @@
             <!-- DEO ZA TABELU SOFTVERA (MIRA/NIKOLA) -->
             <!-- KADA NE ZELITE DA SE PRIKAZE UKUCATE JOS Visibility="Collapsed" -->
             <DockPanel x:Name="tabelaSoftveraLeviDeoPanel" Visibility="Collapsed" Width="100">
+                <Grid x:Name="dodavanjeSoftvera" Width="100">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="*" MinHeight="200"/>
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0" Grid.Row="2" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Row="0" Grid.Column="0" Click="Button_Click_8">Dodaj Softver</Button>
+                        <Button Grid.Row="1" Grid.Column="0" Click="Button_Click_7">Nazad</Button>
+                    </Grid>
+                    <StackPanel  Grid.Column="0" Grid.Row="0">
+                        <Button Click="Button_Click_3">Softver</Button>
+                        <Button Click="Button_Click_4">Ucionica</Button>
+                        <Button Click="Button_Click_5">Smer</Button>
+                        <Button Click="Button_Click_6">Predmet</Button>
+                    </StackPanel>
+                </Grid>
             </DockPanel>
             <!-- KRAJ DELA ZA TABELU SOFTVERA (MIRA/NIKOLA) -->
 
             <!-- DEO ZA TABELU UCIONICA (MIRA/NIKOLA) -->
             <!-- KADA NE ZELITE DA SE PRIKAZE UKUCATE JOS Visibility="Collapsed" -->
             <DockPanel x:Name="tabelaUcionicaLeviDeoPanel" Visibility="Collapsed" Width="100">
+                <Grid x:Name="dodavanjeUcionica" Width="100">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="*" MinHeight="200"/>
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0" Grid.Row="2" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Row="0" Grid.Column="0" Click="Button_Click_9">Dodaj Ucionicu</Button>
+                        <Button Grid.Row="1" Grid.Column="0" Click="Button_Click_7">Nazad</Button>
+                    </Grid>
+                    <StackPanel  Grid.Column="0" Grid.Row="0">
+                        <Button Click="Button_Click_3">Softver</Button>
+                        <Button Click="Button_Click_4">Ucionica</Button>
+                        <Button Click="Button_Click_5">Smer</Button>
+                        <Button Click="Button_Click_6">Predmet</Button>
+                    </StackPanel>
+                </Grid>
             </DockPanel>
             <!-- KRAJ DELA ZA TABELU UCIONICA (MIRA/NIKOLA) -->
 
             <!-- DEO ZA TABELU SMEROVA (MIRA/NIKOLA) -->
             <!-- KADA NE ZELITE DA SE PRIKAZE UKUCATE JOS Visibility="Collapsed" -->
             <DockPanel x:Name="tabelaSmerovaLeviDeoPanel" Visibility="Collapsed" Width="100">
+                <Grid x:Name="dodavanjeSmerova" Width="100">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="*" MinHeight="200"/>
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0" Grid.Row="2" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Row="0" Grid.Column="0" Click="Button_Click_10">Dodaj Smer</Button>
+                        <Button Grid.Row="1" Grid.Column="0" Click="Button_Click_7">Nazad</Button>
+                    </Grid>
+                    <StackPanel  Grid.Column="0" Grid.Row="0">
+                        <Button Click="Button_Click_3">Softver</Button>
+                        <Button Click="Button_Click_4">Ucionica</Button>
+                        <Button Click="Button_Click_5">Smer</Button>
+                        <Button Click="Button_Click_6">Predmet</Button>
+                    </StackPanel>
+                </Grid>
             </DockPanel>
             <!-- KRAJ DELA ZA TABELU SMEROVA (MIRA/NIKOLA) -->
 
             <!-- DEO ZA TABELU PREDMETA (MIRA/NIKOLA) -->
             <!-- KADA NE ZELITE DA SE PRIKAZE UKUCATE JOS Visibility="Collapsed" -->
             <DockPanel x:Name="tabelaPredmetaLeviDeoPanel" Visibility="Collapsed" Width="100">
+                <Grid x:Name="dodavanjePredmeta" Width="100">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="*" MinHeight="200"/>
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0" Grid.Row="2" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Row="0" Grid.Column="0" Click="Button_Click_11">Dodaj Predmet</Button>
+                        <Button Grid.Row="1" Grid.Column="0" Click="Button_Click_7">Nazad</Button>
+                    </Grid>
+                    <StackPanel  Grid.Column="0" Grid.Row="0">
+                        <Button Click="Button_Click_3">Softver</Button>
+                        <Button Click="Button_Click_4">Ucionica</Button>
+                        <Button Click="Button_Click_5">Smer</Button>
+                        <Button Click="Button_Click_6">Predmet</Button>
+                    </StackPanel>
+                </Grid>
             </DockPanel>
             <!-- KRAJ DELA ZA TABELU PREDMETA (MIRA/NIKOLA) -->
 
@@ -342,12 +462,101 @@
                 <!-- DEO ZA TABELU SOFTVERA (MIRA/NIKOLA) -->
                 <!-- KADA NE ZELITE DA SE PRIKAZE UKUCATE JOS Visibility="Collapsed" -->
                 <DockPanel x:Name="tabelaSoftveraDesniDeoPanel" Visibility="Collapsed" >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <DataGrid x:Name="dgrMain" ItemsSource="{Binding Path=softvers}" IsReadOnly="False" />
+                    </Grid>
                 </DockPanel>
                 <!-- KRAJ DELA ZA TABELU SOFTVERA (MIRA/NIKOLA) -->
+                <DockPanel x:Name="tabelaDodajSoftverDesniDeoPanel" Visibility="Collapsed" >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="100" />
+                        </Grid.ColumnDefinitions>
+                        <TextBox Grid.Column="0" Grid.Row="0" TextAlignment="Center">Oznaka</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="1" TextAlignment="Center">Naziv</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="2" TextAlignment="Center">Opis</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="3" TextAlignment="Center">Operativni Sistem</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="4" TextAlignment="Center">Proizvodjac</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="5" TextAlignment="Center">Sajt</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="6" TextAlignment="Center">Godina Izdanja</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="7" TextAlignment="Center">Cena</TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="0" ></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="1"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="2"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="3"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="4"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="5"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="6"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="7"></TextBox>
+                        <Button Grid.ColumnSpan="2" Grid.Row="8">Dodaj</Button>
+                    </Grid>
+                </DockPanel>
+               
 
                 <!-- DEO ZA TABELU UCIONICA (MIRA/NIKOLA) -->
                 <!-- KADA NE ZELITE DA SE PRIKAZE UKUCATE JOS Visibility="Collapsed" -->
                 <DockPanel x:Name="tabelaUcionicaDesniDeoPanel" Visibility="Collapsed" >
+                </DockPanel>
+                <DockPanel x:Name="tabelaDodajUcionicuDesniDeoPanel" Visibility="Collapsed" >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="100" />
+                        </Grid.ColumnDefinitions>
+                        <TextBox Grid.Column="0" Grid.Row="0" TextAlignment="Center">Oznaka</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="1" TextAlignment="Center">Opis</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="2" TextAlignment="Center">Broj Mesta</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="3" TextAlignment="Center">Projektor</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="4" TextAlignment="Center">Tabla</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="5" TextAlignment="Center">Smart Tabla</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="6" TextAlignment="Center">Operativni Sistem</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="7">Softver:</TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="0" ></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="1"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="2"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="3"></TextBox>
+                        <ComboBox Grid.Column="1" Grid.Row="4">
+                            <ComboBoxItem>Da</ComboBoxItem>
+                            <ComboBoxItem>Ne</ComboBoxItem>
+                        </ComboBox>
+                        <ComboBox Grid.Column="1" Grid.Row="5">
+                            <ComboBoxItem>Da</ComboBoxItem>
+                            <ComboBoxItem>Ne</ComboBoxItem>
+                        </ComboBox>
+                        <TextBox Grid.Column="1" Grid.Row="6"></TextBox>
+                        <ComboBox Grid.Column="1" Grid.Row="7"></ComboBox>
+                        <Button Grid.ColumnSpan="2" Grid.Row="8">Dodaj</Button>
+                    </Grid>
                 </DockPanel>
                 <!-- KRAJ DELA ZA TABELU UCIONICA (MIRA/NIKOLA) -->
 
@@ -355,11 +564,89 @@
                 <!-- KADA NE ZELITE DA SE PRIKAZE UKUCATE JOS Visibility="Collapsed" -->
                 <DockPanel x:Name="tabelaSmerovaDesniDeoPanel" Visibility="Collapsed" >
                 </DockPanel>
+                <DockPanel x:Name="tabelaDodajSmerDesniDeoPanel" Visibility="Collapsed" >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="24"/>
+                            <RowDefinition Height="20"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="100" />
+                        </Grid.ColumnDefinitions>
+                        <TextBox Grid.Column="0" Grid.Row="0" TextAlignment="Center">Oznaka</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="1" TextAlignment="Center">Naziv</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="2" TextAlignment="Center">Opis</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="3" TextAlignment="Center">Datum</TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="0" ></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="1"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="2"></TextBox>
+                        <DatePicker Grid.Column="1" Grid.Row="3"></DatePicker>
+                        <Button Grid.ColumnSpan="2" Grid.Row="4">Dodaj</Button>
+                    </Grid>
+                </DockPanel>
                 <!-- KRAJ DELA ZA TABELU SMEROVA (MIRA/NIKOLA) -->
 
                 <!-- DEO ZA TABELU PREDMETA (MIRA/NIKOLA) -->
                 <!-- KADA NE ZELITE DA SE PRIKAZE UKUCATE JOS Visibility="Collapsed" -->
                 <DockPanel x:Name="tabelaPredmetaDesniDeoPanel" Visibility="Collapsed" >
+                </DockPanel>
+                <DockPanel x:Name="tabelaDodajPredmetDesniDeoPanel" Visibility="Collapsed" >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="200"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBox Grid.Column="0" Grid.Row="0" TextAlignment="Center">Oznaka</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="1" TextAlignment="Center">Naziv</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="2" TextAlignment="Center">Opis</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="3" TextAlignment="Center">Smer</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="4" TextAlignment="Center">Velicina Grupe</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="5" TextAlignment="Center">Min Duzina Trajanja Predmeta</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="6" TextAlignment="Center">Broj Termina</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="7" TextAlignment="Center">Projektor</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="8" TextAlignment="Center">Tabla</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="9" TextAlignment="Center">Smart Tabla</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="10" TextAlignment="Center">Operativni Sistem</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="11" TextAlignment="Center">Softver</TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="0" ></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="1"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="2"></TextBox>
+                        <ComboBox Grid.Column="1" Grid.Row="3"></ComboBox>
+                        <TextBox Grid.Column="1" Grid.Row="4"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="5"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="6"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="7"></TextBox>
+                        <ComboBox Grid.Column="1" Grid.Row="8">
+                            <ComboBoxItem>Da</ComboBoxItem>
+                            <ComboBoxItem>Ne</ComboBoxItem>
+                        </ComboBox>
+                        <ComboBox Grid.Column="1" Grid.Row="9">
+                            <ComboBoxItem>Da</ComboBoxItem>
+                            <ComboBoxItem>Ne</ComboBoxItem>
+                        </ComboBox>
+                        <TextBox Grid.Column="1" Grid.Row="10"></TextBox>
+                        <ComboBox Grid.Column="1" Grid.Row="11"></ComboBox>
+                        <Button Grid.ColumnSpan="2" Grid.Row="12">Dodaj</Button>
+                    </Grid>
                 </DockPanel>
                 <!-- KRAJ DELA ZA TABELU PREDMETA (MIRA/NIKOLA) -->
 

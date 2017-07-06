@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using System.Collections.ObjectModel;
 
 namespace Raspored
 {
@@ -37,8 +38,11 @@ namespace Raspored
         Predmeti predmeti = new Predmeti();
         string selektovanaUcionica = "";
         int selektovaniDan = 0;
+		
         List<TextBlock> listaTrenutnihTermina = new List<TextBlock>();
         List<Border> listaTmpBordera = new List<Border>();
+        public ObservableCollection<Softver> softvers { get; set; }
+
         public MainWindow()
         {
             //ucionice
@@ -49,14 +53,17 @@ namespace Raspored
             //predmeti
 
             InitializeComponent();
+            this.DataContext = this;
+            softvers = new ObservableCollection<Softver>();
 
             DispatcherTimer timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromMinutes(1);
             timer.Tick += DispatcherTimer_Tick;
             timer.Start();
-
+            
             smerovi.add("A", "ASD", "asdasdasd", DateTime.Now);
             softver.add("VS2015", "Visual studio 2015", "Blablabla", "Windows", "Microsoft", "www.microsoft.com", "2014", 20000);
+            
             ucionice.add("A1", "Za HCI", 2, false, false, false, "Windows", softver);
             ucionice.add("A2", "Za HCI", 2, false, true, false, "Windows", softver);
             ucionice.add("A3", "Za HCI", 2, false, false, true, "Windows", softver);
@@ -69,6 +76,11 @@ namespace Raspored
             terminiNeaktivni.add(4, DateTime.Now, null, "P12");
             terminiNeaktivni.add(4, DateTime.Now, null, "P13");
             terminiAktivni.add(2, new DateTime(2017,7,7,10,30,00), ucionice.get("A5"), "P13");
+
+            foreach (var item in softver.Podaci)
+            {
+                softvers.Add(item);
+            }
 
             classroomList.ItemsSource = ucionice.Podaci;
             terminiZaOdraditi.ItemsSource = terminiNeaktivni.Podaci;
@@ -843,6 +855,129 @@ namespace Raspored
                 raspored.Children.Remove(bord);
             }
             listaTmpBordera.Clear();
+		}
+		
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            noviTerminLeviDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaUcionicaLeviDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaSmerovaLeviDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaPredmetaLeviDeoPanel.Visibility = Visibility.Collapsed;
+            rasporedDesniDeoPanel.Visibility = Visibility.Collapsed;
+            rasporedLeviDeoPanel.Visibility = Visibility.Collapsed;
+            rasporedNoviDesniDeoPanel.Visibility = Visibility.Collapsed;
+            noviTerminDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaUcionicaDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaSmerovaDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaPredmetaDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaDodajSoftverDesniDeoPanel.Visibility = Visibility.Collapsed;
+
+            tabelaSoftveraLeviDeoPanel.Visibility = Visibility.Visible;
+            tabelaSoftveraDesniDeoPanel.Visibility = Visibility.Visible;
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            tabelaSoftveraLeviDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaSoftveraDesniDeoPanel.Visibility = Visibility.Collapsed;
+            noviTerminLeviDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaSmerovaLeviDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaPredmetaLeviDeoPanel.Visibility = Visibility.Collapsed;
+            rasporedDesniDeoPanel.Visibility = Visibility.Collapsed;
+            rasporedLeviDeoPanel.Visibility = Visibility.Collapsed;
+            rasporedNoviDesniDeoPanel.Visibility = Visibility.Collapsed;
+            noviTerminDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaSmerovaDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaPredmetaDesniDeoPanel.Visibility = Visibility.Collapsed;
+
+            tabelaUcionicaLeviDeoPanel.Visibility = Visibility.Visible;
+            tabelaUcionicaDesniDeoPanel.Visibility = Visibility.Visible;
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            tabelaSoftveraLeviDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaSoftveraDesniDeoPanel.Visibility = Visibility.Collapsed;
+            noviTerminLeviDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaPredmetaLeviDeoPanel.Visibility = Visibility.Collapsed;
+            rasporedDesniDeoPanel.Visibility = Visibility.Collapsed;
+            rasporedLeviDeoPanel.Visibility = Visibility.Collapsed;
+            rasporedNoviDesniDeoPanel.Visibility = Visibility.Collapsed;
+            noviTerminDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaPredmetaDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaUcionicaLeviDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaUcionicaDesniDeoPanel.Visibility = Visibility.Collapsed;
+
+            tabelaSmerovaDesniDeoPanel.Visibility = Visibility.Visible;
+            tabelaSmerovaLeviDeoPanel.Visibility = Visibility.Visible;
+        }
+
+        private void Button_Click_6(object sender, RoutedEventArgs e)
+        {
+            tabelaSoftveraLeviDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaSoftveraDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaSmerovaDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaSmerovaLeviDeoPanel.Visibility = Visibility.Collapsed;
+            noviTerminLeviDeoPanel.Visibility = Visibility.Collapsed;
+            rasporedDesniDeoPanel.Visibility = Visibility.Collapsed;
+            rasporedLeviDeoPanel.Visibility = Visibility.Collapsed;
+            rasporedNoviDesniDeoPanel.Visibility = Visibility.Collapsed;
+            noviTerminDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaUcionicaLeviDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaUcionicaDesniDeoPanel.Visibility = Visibility.Collapsed;
+
+            tabelaPredmetaDesniDeoPanel.Visibility = Visibility.Visible;
+            tabelaPredmetaLeviDeoPanel.Visibility = Visibility.Visible;
+        }
+
+        private void Button_Click_7(object sender, RoutedEventArgs e)
+        {
+            tabelaSoftveraLeviDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaUcionicaLeviDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaSmerovaLeviDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaPredmetaLeviDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaSoftveraDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaUcionicaDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaSmerovaDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaPredmetaDesniDeoPanel.Visibility = Visibility.Collapsed;
+            rasporedLeviDeoPanel.Visibility = Visibility.Visible;
+            rasporedNoviDesniDeoPanel.Visibility = Visibility.Visible;
+        }
+
+        private void Button_Click_8(object sender, RoutedEventArgs e)
+        {
+            tabelaSoftveraDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaDodajPredmetDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaDodajSmerDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaDodajUcionicuDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaDodajSoftverDesniDeoPanel.Visibility = Visibility.Visible;
+        }
+
+        private void Button_Click_9(object sender, RoutedEventArgs e)
+        {
+            tabelaUcionicaDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaDodajSoftverDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaDodajPredmetDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaDodajSmerDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaDodajUcionicuDesniDeoPanel.Visibility = Visibility.Visible;
+        }
+
+        private void Button_Click_10(object sender, RoutedEventArgs e)
+        {
+            tabelaSmerovaDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaDodajSoftverDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaDodajUcionicuDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaDodajPredmetDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaDodajSmerDesniDeoPanel.Visibility = Visibility.Visible;
+        }
+
+        private void Button_Click_11(object sender, RoutedEventArgs e)
+        {
+            tabelaPredmetaDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaDodajUcionicuDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaDodajSoftverDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaDodajSmerDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaDodajPredmetDesniDeoPanel.Visibility = Visibility.Visible;
         }
     }
 }
