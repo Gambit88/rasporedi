@@ -25,6 +25,17 @@ namespace Raspored
             {
                 s = null;
             }
+            foreach(Softver soft in softveri.Podaci)
+            {
+                if(soft.Os=="Windows" && os == "Linux")
+                {
+                    s = null;
+                }
+                if (os == "Windows" &&  soft.Os == "Linux")
+                {
+                    s = null;
+                }
+            }
             if (s == null)
             {
                 Podaci.Add(new Predmet(oznaka, naziv, opis, smer, velicinaGrupe, brCasovaMin, brTermina, projektor, tabla, smart, os, softveri));

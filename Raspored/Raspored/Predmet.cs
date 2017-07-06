@@ -35,7 +35,7 @@ namespace Raspored
             this.Tabla = tabla;
             this.Smart = smart;
             this.Os = os;
-            this.Softver = Softver;
+            this.Softver = softveri;
         }
         public void edit(string naziv, string opis, Smer smer, int velicinaGrupe, int brCasovaMin, int brTermina, bool projektor, bool tabla, bool smart, string os, Softveri softveri)
         {
@@ -49,7 +49,7 @@ namespace Raspored
             this.Tabla = tabla;
             this.Smart = smart;
             this.Os = os;
-            this.Softver = Softver;
+            this.Softver = softveri;
         }
         public void save(BinaryWriter bw)
         {

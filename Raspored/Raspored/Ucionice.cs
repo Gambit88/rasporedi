@@ -26,6 +26,17 @@ namespace Raspored
             {
                 s = null;
             }
+            foreach (Softver soft in softver.Podaci)
+            {
+                if (soft.Os == "Windows" && os == "Linux")
+                {
+                    s = null;
+                }
+                if (os == "Windows" && soft.Os == "Linux")
+                {
+                    s = null;
+                }
+            }
             if (s == null)
             {
                 Podaci.Add(new Ucionica(oznaka, opis, brMesta, projektor, tabla, smart, os, softver));
