@@ -96,6 +96,7 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
+                        <Button Grid.Row="0" Grid.Column="0" Click="Button_Click_8">Dodaj Softver</Button>
                         <Button Grid.Row="1" Grid.Column="0" Click="Button_Click_7">Nazad</Button>
                     </Grid>
                     <StackPanel  Grid.Column="0" Grid.Row="0">
@@ -131,6 +132,7 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
+                        <Button Grid.Row="0" Grid.Column="0" Click="Button_Click_9">Dodaj Ucionicu</Button>
                         <Button Grid.Row="1" Grid.Column="0" Click="Button_Click_7">Nazad</Button>
                     </Grid>
                     <StackPanel  Grid.Column="0" Grid.Row="0">
@@ -166,6 +168,7 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
+                        <Button Grid.Row="0" Grid.Column="0" Click="Button_Click_10">Dodaj Smer</Button>
                         <Button Grid.Row="1" Grid.Column="0" Click="Button_Click_7">Nazad</Button>
                     </Grid>
                     <StackPanel  Grid.Column="0" Grid.Row="0">
@@ -201,6 +204,7 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
+                        <Button Grid.Row="0" Grid.Column="0" Click="Button_Click_11">Dodaj Predmet</Button>
                         <Button Grid.Row="1" Grid.Column="0" Click="Button_Click_7">Nazad</Button>
                     </Grid>
                     <StackPanel  Grid.Column="0" Grid.Row="0">
@@ -457,7 +461,7 @@
 
                 <!-- DEO ZA TABELU SOFTVERA (MIRA/NIKOLA) -->
                 <!-- KADA NE ZELITE DA SE PRIKAZE UKUCATE JOS Visibility="Collapsed" -->
-                <DockPanel x:Name="tabelaSoftveraDesniDeoPanel" Visibility="Collapsed" >
+                <DockPanel x:Name="tabelaSoftveraDesniDeoPanel" Visibility="Collapsed" RenderTransformOrigin="0.508,0.623" >
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition />
@@ -466,7 +470,44 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
-                        <DataGrid x:Name="dgrSoftver"  IsReadOnly="False" />
+                        <DataGrid x:Name="dgrSoftver"  IsReadOnly="True" />
+                        <TextBox Grid.Column="0" Grid.Row="1" Height="20" Width="100" ></TextBox>
+                    </Grid>
+                </DockPanel>
+                <DockPanel x:Name="tabelaDodajSoftverDesniDeoPanel" Visibility="Collapsed" >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="100" />
+                        </Grid.ColumnDefinitions>
+                        <TextBox Grid.Column="0" Grid.Row="0" TextAlignment="Center">Oznaka</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="1" TextAlignment="Center">Naziv</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="2" TextAlignment="Center">Opis</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="3" TextAlignment="Center">Operativni Sistem</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="4" TextAlignment="Center">Proizvodjac</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="5" TextAlignment="Center">Sajt</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="6" TextAlignment="Center">Godina Izdanja</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="7" TextAlignment="Center">Cena</TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="0" ></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="1"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="2"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="3"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="4"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="5"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="6"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="7"></TextBox>
+                        <Button Grid.ColumnSpan="2" Grid.Row="8">Dodaj</Button>
                     </Grid>
                 </DockPanel>
                 <!-- KRAJ DELA ZA TABELU SOFTVERA (MIRA/NIKOLA) -->
@@ -481,7 +522,49 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
-                        <DataGrid x:Name="dgrUcionica"  IsReadOnly="False" />
+                        <DataGrid x:Name="dgrUcionica"  IsReadOnly="True" />
+                    </Grid>
+                </DockPanel>
+                <DockPanel x:Name="tabelaDodajUcionicuDesniDeoPanel" Visibility="Collapsed" >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="100" />
+                        </Grid.ColumnDefinitions>
+                        <TextBox Grid.Column="0" Grid.Row="0" TextAlignment="Center">Oznaka</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="1" TextAlignment="Center">Opis</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="2" TextAlignment="Center">Broj Mesta</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="3" TextAlignment="Center">Projektor</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="4" TextAlignment="Center">Tabla</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="5" TextAlignment="Center">Smart Tabla</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="6" TextAlignment="Center">Operativni Sistem</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="7">Softver:</TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="0" ></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="1"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="2"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="3"></TextBox>
+                        <ComboBox Grid.Column="1" Grid.Row="4">
+                            <ComboBoxItem>Da</ComboBoxItem>
+                            <ComboBoxItem>Ne</ComboBoxItem>
+                        </ComboBox>
+                        <ComboBox Grid.Column="1" Grid.Row="5">
+                            <ComboBoxItem>Da</ComboBoxItem>
+                            <ComboBoxItem>Ne</ComboBoxItem>
+                        </ComboBox>
+                        <TextBox Grid.Column="1" Grid.Row="6"></TextBox>
+                        <ComboBox Grid.Column="1" Grid.Row="7"></ComboBox>
+                        <Button Grid.ColumnSpan="2" Grid.Row="8">Dodaj</Button>
                     </Grid>
                 </DockPanel>
                 <!-- KRAJ DELA ZA TABELU UCIONICA (MIRA/NIKOLA) -->
@@ -497,7 +580,31 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
-                        <DataGrid x:Name="dgrSmer"  IsReadOnly="False" />
+                        <DataGrid x:Name="dgrSmer"  IsReadOnly="True" />
+                    </Grid>
+                </DockPanel>
+                <DockPanel x:Name="tabelaDodajSmerDesniDeoPanel" Visibility="Collapsed" >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="24"/>
+                            <RowDefinition Height="20"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="100" />
+                        </Grid.ColumnDefinitions>
+                        <TextBox Grid.Column="0" Grid.Row="0" TextAlignment="Center">Oznaka</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="1" TextAlignment="Center">Naziv</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="2" TextAlignment="Center">Opis</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="3" TextAlignment="Center">Datum</TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="0" ></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="1"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="2"></TextBox>
+                        <DatePicker Grid.Column="1" Grid.Row="3"></DatePicker>
+                        <Button Grid.ColumnSpan="2" Grid.Row="4">Dodaj</Button>
                     </Grid>
                 </DockPanel>
                 <!-- KRAJ DELA ZA TABELU SMEROVA (MIRA/NIKOLA) -->
@@ -513,7 +620,61 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
-                        <DataGrid x:Name="dgrPredmet"  IsReadOnly="False" />
+                        <DataGrid x:Name="dgrPredmet"  IsReadOnly="True" />
+                    </Grid>
+                </DockPanel>
+                <DockPanel x:Name="tabelaDodajPredmetDesniDeoPanel" Visibility="Collapsed" >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="200"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBox Grid.Column="0" Grid.Row="0" TextAlignment="Center">Oznaka</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="1" TextAlignment="Center">Naziv</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="2" TextAlignment="Center">Opis</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="3" TextAlignment="Center">Smer</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="4" TextAlignment="Center">Velicina Grupe</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="5" TextAlignment="Center">Min Duzina Trajanja Predmeta</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="6" TextAlignment="Center">Broj Termina</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="7" TextAlignment="Center">Projektor</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="8" TextAlignment="Center">Tabla</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="9" TextAlignment="Center">Smart Tabla</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="10" TextAlignment="Center">Operativni Sistem</TextBox>
+                        <TextBox Grid.Column="0" Grid.Row="11" TextAlignment="Center">Softver</TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="0" ></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="1"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="2"></TextBox>
+                        <ComboBox Grid.Column="1" Grid.Row="3"></ComboBox>
+                        <TextBox Grid.Column="1" Grid.Row="4"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="5"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="6"></TextBox>
+                        <TextBox Grid.Column="1" Grid.Row="7"></TextBox>
+                        <ComboBox Grid.Column="1" Grid.Row="8">
+                            <ComboBoxItem>Da</ComboBoxItem>
+                            <ComboBoxItem>Ne</ComboBoxItem>
+                        </ComboBox>
+                        <ComboBox Grid.Column="1" Grid.Row="9">
+                            <ComboBoxItem>Da</ComboBoxItem>
+                            <ComboBoxItem>Ne</ComboBoxItem>
+                        </ComboBox>
+                        <TextBox Grid.Column="1" Grid.Row="10"></TextBox>
+                        <ComboBox Grid.Column="1" Grid.Row="11"></ComboBox>
+                        <Button Grid.ColumnSpan="2" Grid.Row="12">Dodaj</Button>
                     </Grid>
                 </DockPanel>
                 <!-- KRAJ DELA ZA TABELU PREDMETA (MIRA/NIKOLA) -->
