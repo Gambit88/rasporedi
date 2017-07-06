@@ -870,7 +870,6 @@ namespace Raspored
             tabelaUcionicaDesniDeoPanel.Visibility = Visibility.Collapsed;
             tabelaSmerovaDesniDeoPanel.Visibility = Visibility.Collapsed;
             tabelaPredmetaDesniDeoPanel.Visibility = Visibility.Collapsed;
-            tabelaDodajSoftverDesniDeoPanel.Visibility = Visibility.Collapsed;
 
             tabelaSoftveraLeviDeoPanel.Visibility = Visibility.Visible;
             tabelaSoftveraDesniDeoPanel.Visibility = Visibility.Visible;
@@ -942,42 +941,6 @@ namespace Raspored
             tabelaPredmetaDesniDeoPanel.Visibility = Visibility.Collapsed;
             rasporedLeviDeoPanel.Visibility = Visibility.Visible;
             rasporedNoviDesniDeoPanel.Visibility = Visibility.Visible;
-        }
-
-        private void Button_Click_8(object sender, RoutedEventArgs e)
-        {
-            tabelaSoftveraDesniDeoPanel.Visibility = Visibility.Collapsed;
-            tabelaDodajPredmetDesniDeoPanel.Visibility = Visibility.Collapsed;
-            tabelaDodajSmerDesniDeoPanel.Visibility = Visibility.Collapsed;
-            tabelaDodajUcionicuDesniDeoPanel.Visibility = Visibility.Collapsed;
-            tabelaDodajSoftverDesniDeoPanel.Visibility = Visibility.Visible;
-        }
-
-        private void Button_Click_9(object sender, RoutedEventArgs e)
-        {
-            tabelaUcionicaDesniDeoPanel.Visibility = Visibility.Collapsed;
-            tabelaDodajSoftverDesniDeoPanel.Visibility = Visibility.Collapsed;
-            tabelaDodajPredmetDesniDeoPanel.Visibility = Visibility.Collapsed;
-            tabelaDodajSmerDesniDeoPanel.Visibility = Visibility.Collapsed;
-            tabelaDodajUcionicuDesniDeoPanel.Visibility = Visibility.Visible;
-        }
-
-        private void Button_Click_10(object sender, RoutedEventArgs e)
-        {
-            tabelaSmerovaDesniDeoPanel.Visibility = Visibility.Collapsed;
-            tabelaDodajSoftverDesniDeoPanel.Visibility = Visibility.Collapsed;
-            tabelaDodajUcionicuDesniDeoPanel.Visibility = Visibility.Collapsed;
-            tabelaDodajPredmetDesniDeoPanel.Visibility = Visibility.Collapsed;
-            tabelaDodajSmerDesniDeoPanel.Visibility = Visibility.Visible;
-        }
-
-        private void Button_Click_11(object sender, RoutedEventArgs e)
-        {
-            tabelaPredmetaDesniDeoPanel.Visibility = Visibility.Collapsed;
-            tabelaDodajUcionicuDesniDeoPanel.Visibility = Visibility.Collapsed;
-            tabelaDodajSoftverDesniDeoPanel.Visibility = Visibility.Collapsed;
-            tabelaDodajSmerDesniDeoPanel.Visibility = Visibility.Collapsed;
-            tabelaDodajPredmetDesniDeoPanel.Visibility = Visibility.Visible;
         }
     }
 }
