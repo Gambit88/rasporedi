@@ -8,7 +8,7 @@ using System.ComponentModel;
 
 namespace Raspored
 {
-    public class Predmet : INotifyPropertyChanged
+    class Predmet : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged(string name)
