@@ -593,5 +593,19 @@ namespace Raspored
             tabelaSoftveraLeviDeoPanel.Visibility = Visibility.Visible;
             tabelaSoftveraDesniDeoPanel.Visibility = Visibility.Visible;
         }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            tabelaSoftveraLeviDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaUcionicaLeviDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaSmerovaLeviDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaPredmetaLeviDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaSoftveraDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaUcionicaDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaSmerovaDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaPredmetaDesniDeoPanel.Visibility = Visibility.Collapsed;
+            rasporedLeviDeoPanel.Visibility = Visibility.Visible;
+            rasporedNoviDesniDeoPanel.Visibility = Visibility.Visible;
+        }
     }
 }
