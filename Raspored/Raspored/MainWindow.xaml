@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Raspored"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525" MinHeight="350" MinWidth="525">
+        Title="MainWindow" Height="360" Width="525" MinHeight="350" MinWidth="525">
     <DockPanel>
         <!-- LEVI PANEL -->
         <DockPanel DockPanel.Dock="Left" MinWidth="100">
@@ -96,14 +96,14 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <Button Grid.Row="0" Grid.Column="0">Dodaj</Button>
-                        <Button Grid.Row="1" Grid.Column="0" Click="Button_Click_4">Nazad</Button>
+                        <Button Grid.Row="0" Grid.Column="0">Dodaj Softver</Button>
+                        <Button Grid.Row="1" Grid.Column="0" Click="Button_Click_7">Nazad</Button>
                     </Grid>
                     <StackPanel  Grid.Column="0" Grid.Row="0">
-                        <Button>Softver</Button>
-                        <Button>Ucionica</Button>
-                        <Button>Smer</Button>
-                        <Button>Predmet</Button>
+                        <Button Click="Button_Click_3">Softver</Button>
+                        <Button Click="Button_Click_4">Ucionica</Button>
+                        <Button Click="Button_Click_5">Smer</Button>
+                        <Button Click="Button_Click_6">Predmet</Button>
                     </StackPanel>
                 </Grid>
             </DockPanel>
@@ -132,14 +132,14 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <Button Grid.Row="0" Grid.Column="0">Dodaj</Button>
-                        <Button Grid.Row="1" Grid.Column="0" Click="Button_Click_4">Nazad</Button>
+                        <Button Grid.Row="0" Grid.Column="0">Dodaj Ucionicu</Button>
+                        <Button Grid.Row="1" Grid.Column="0" Click="Button_Click_7">Nazad</Button>
                     </Grid>
                     <StackPanel  Grid.Column="0" Grid.Row="0">
-                        <Button>Softver</Button>
-                        <Button>Ucionica</Button>
-                        <Button>Smer</Button>
-                        <Button>Predmet</Button>
+                        <Button Click="Button_Click_3">Softver</Button>
+                        <Button Click="Button_Click_4">Ucionica</Button>
+                        <Button Click="Button_Click_5">Smer</Button>
+                        <Button Click="Button_Click_6">Predmet</Button>
                     </StackPanel>
                 </Grid>
             </DockPanel>
@@ -168,14 +168,14 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <Button Grid.Row="0" Grid.Column="0">Dodaj</Button>
-                        <Button Grid.Row="1" Grid.Column="0" Click="Button_Click_4">Nazad</Button>
+                        <Button Grid.Row="0" Grid.Column="0">Dodaj Smer</Button>
+                        <Button Grid.Row="1" Grid.Column="0" Click="Button_Click_7">Nazad</Button>
                     </Grid>
                     <StackPanel  Grid.Column="0" Grid.Row="0">
-                        <Button>Softver</Button>
-                        <Button>Ucionica</Button>
-                        <Button>Smer</Button>
-                        <Button>Predmet</Button>
+                        <Button Click="Button_Click_3">Softver</Button>
+                        <Button Click="Button_Click_4">Ucionica</Button>
+                        <Button Click="Button_Click_5">Smer</Button>
+                        <Button Click="Button_Click_6">Predmet</Button>
                     </StackPanel>
                 </Grid>
             </DockPanel>
@@ -204,14 +204,14 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <Button Grid.Row="0" Grid.Column="0">Dodaj</Button>
-                        <Button Grid.Row="1" Grid.Column="0" Click="Button_Click_4">Nazad</Button>
+                        <Button Grid.Row="0" Grid.Column="0">Dodaj Predmet</Button>
+                        <Button Grid.Row="1" Grid.Column="0" Click="Button_Click_7">Nazad</Button>
                     </Grid>
                     <StackPanel  Grid.Column="0" Grid.Row="0">
-                        <Button>Softver</Button>
-                        <Button>Ucionica</Button>
-                        <Button>Smer</Button>
-                        <Button>Predmet</Button>
+                        <Button Click="Button_Click_3">Softver</Button>
+                        <Button Click="Button_Click_4">Ucionica</Button>
+                        <Button Click="Button_Click_5">Smer</Button>
+                        <Button Click="Button_Click_6">Predmet</Button>
                     </StackPanel>
                 </Grid>
             </DockPanel>

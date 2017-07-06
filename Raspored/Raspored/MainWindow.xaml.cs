@@ -588,13 +588,77 @@ namespace Raspored
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
+            noviTerminLeviDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaUcionicaLeviDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaSmerovaLeviDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaPredmetaLeviDeoPanel.Visibility = Visibility.Collapsed;
+            rasporedDesniDeoPanel.Visibility = Visibility.Collapsed;
             rasporedLeviDeoPanel.Visibility = Visibility.Collapsed;
             rasporedNoviDesniDeoPanel.Visibility = Visibility.Collapsed;
+            noviTerminDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaUcionicaDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaSmerovaDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaPredmetaDesniDeoPanel.Visibility = Visibility.Collapsed;
+
             tabelaSoftveraLeviDeoPanel.Visibility = Visibility.Visible;
             tabelaSoftveraDesniDeoPanel.Visibility = Visibility.Visible;
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            tabelaSoftveraLeviDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaSoftveraDesniDeoPanel.Visibility = Visibility.Collapsed;
+            noviTerminLeviDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaSmerovaLeviDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaPredmetaLeviDeoPanel.Visibility = Visibility.Collapsed;
+            rasporedDesniDeoPanel.Visibility = Visibility.Collapsed;
+            rasporedLeviDeoPanel.Visibility = Visibility.Collapsed;
+            rasporedNoviDesniDeoPanel.Visibility = Visibility.Collapsed;
+            noviTerminDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaSmerovaDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaPredmetaDesniDeoPanel.Visibility = Visibility.Collapsed;
+
+            tabelaUcionicaLeviDeoPanel.Visibility = Visibility.Visible;
+            tabelaUcionicaDesniDeoPanel.Visibility = Visibility.Visible;
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            tabelaSoftveraLeviDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaSoftveraDesniDeoPanel.Visibility = Visibility.Collapsed;
+            noviTerminLeviDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaPredmetaLeviDeoPanel.Visibility = Visibility.Collapsed;
+            rasporedDesniDeoPanel.Visibility = Visibility.Collapsed;
+            rasporedLeviDeoPanel.Visibility = Visibility.Collapsed;
+            rasporedNoviDesniDeoPanel.Visibility = Visibility.Collapsed;
+            noviTerminDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaPredmetaDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaUcionicaLeviDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaUcionicaDesniDeoPanel.Visibility = Visibility.Collapsed;
+
+            tabelaSmerovaDesniDeoPanel.Visibility = Visibility.Visible;
+            tabelaSmerovaLeviDeoPanel.Visibility = Visibility.Visible;
+        }
+
+        private void Button_Click_6(object sender, RoutedEventArgs e)
+        {
+            tabelaSoftveraLeviDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaSoftveraDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaSmerovaDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaSmerovaLeviDeoPanel.Visibility = Visibility.Collapsed;
+            noviTerminLeviDeoPanel.Visibility = Visibility.Collapsed;
+            rasporedDesniDeoPanel.Visibility = Visibility.Collapsed;
+            rasporedLeviDeoPanel.Visibility = Visibility.Collapsed;
+            rasporedNoviDesniDeoPanel.Visibility = Visibility.Collapsed;
+            noviTerminDesniDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaUcionicaLeviDeoPanel.Visibility = Visibility.Collapsed;
+            tabelaUcionicaDesniDeoPanel.Visibility = Visibility.Collapsed;
+
+            tabelaPredmetaDesniDeoPanel.Visibility = Visibility.Visible;
+            tabelaPredmetaLeviDeoPanel.Visibility = Visibility.Visible;
+        }
+
+        private void Button_Click_7(object sender, RoutedEventArgs e)
         {
             tabelaSoftveraLeviDeoPanel.Visibility = Visibility.Collapsed;
             tabelaUcionicaLeviDeoPanel.Visibility = Visibility.Collapsed;
