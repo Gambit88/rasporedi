@@ -178,7 +178,6 @@
                         <TextBlock  Grid.Row="0" Grid.Column="8" Grid.ColumnSpan="2" VerticalAlignment="Center">9:00</TextBlock>
                         <TextBlock  Grid.Row="0" Grid.Column="12" Grid.ColumnSpan="2" VerticalAlignment="Center">10:00</TextBlock>
                         <TextBlock  Grid.Row="0" Grid.Column="16" Grid.ColumnSpan="2" VerticalAlignment="Center">11:00</TextBlock>
-                        <TextBlock  Grid.Row="0" Grid.Column="18" Grid.ColumnSpan="2" HorizontalAlignment="Right" VerticalAlignment="Center">12:00</TextBlock>
 
                         <Border Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="20" BorderThickness="0 5 0 5" BorderBrush="Black"></Border>
                         <TextBlock  Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center">12:00</TextBlock>
@@ -186,7 +185,6 @@
                         <TextBlock  Grid.Row="2" Grid.Column="8" Grid.ColumnSpan="2" VerticalAlignment="Center">14:00</TextBlock>
                         <TextBlock  Grid.Row="2" Grid.Column="12" Grid.ColumnSpan="2" VerticalAlignment="Center">15:00</TextBlock>
                         <TextBlock  Grid.Row="2" Grid.Column="16" Grid.ColumnSpan="2" VerticalAlignment="Center">16:00</TextBlock>
-                        <TextBlock  Grid.Row="2" Grid.Column="18" Grid.ColumnSpan="2" HorizontalAlignment="Right" VerticalAlignment="Center">17:00</TextBlock>
 
                         <Border Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="20" BorderThickness="0 5 0 5" BorderBrush="Black"></Border>
                         <TextBlock  Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center">17:00</TextBlock>
@@ -194,7 +192,6 @@
                         <TextBlock  Grid.Row="4" Grid.Column="8" Grid.ColumnSpan="2" VerticalAlignment="Center">19:00</TextBlock>
                         <TextBlock  Grid.Row="4" Grid.Column="12" Grid.ColumnSpan="2" VerticalAlignment="Center">20:00</TextBlock>
                         <TextBlock  Grid.Row="4" Grid.Column="16" Grid.ColumnSpan="2" VerticalAlignment="Center">21:00</TextBlock>
-                        <TextBlock  Grid.Row="4" Grid.Column="18" Grid.ColumnSpan="2" HorizontalAlignment="Right" VerticalAlignment="Center">22:00</TextBlock>
 
                         <Border Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="20" BorderThickness="0 5 0 0" BorderBrush="Black"></Border>
 
@@ -261,68 +258,68 @@
                         <Border Grid.Row="5" Grid.Column="18" BorderThickness="1 0 1 0" BorderBrush="Black"></Border>
                         <Border Grid.Row="5" Grid.Column="19" BorderThickness="1 0 3 0" BorderBrush="Black"></Border>
 
-                        <TextBlock Grid.Row="1" Grid.Column="0" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_07_00"></TextBlock>
-                        <TextBlock Grid.Row="1" Grid.Column="1" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_07_15"></TextBlock>
-                        <TextBlock Grid.Row="1" Grid.Column="2" AllowDrop="True"  DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_07_30"></TextBlock>
-                        <TextBlock Grid.Row="1" Grid.Column="3" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_07_45"></TextBlock>
-                        <TextBlock Grid.Row="1" Grid.Column="4" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_08_00"></TextBlock>
-                        <TextBlock Grid.Row="1" Grid.Column="5" AllowDrop="True"  DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_08_15"></TextBlock>
-                        <TextBlock Grid.Row="1" Grid.Column="6" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_08_30"></TextBlock>
-                        <TextBlock Grid.Row="1" Grid.Column="7" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_08_45"></TextBlock>
-                        <TextBlock Grid.Row="1" Grid.Column="8" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_09_00"></TextBlock>
-                        <TextBlock Grid.Row="1" Grid.Column="9" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_09_15"></TextBlock>
-                        <TextBlock Grid.Row="1" Grid.Column="10" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_09_30"></TextBlock>
-                        <TextBlock Grid.Row="1" Grid.Column="11" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_09_45"></TextBlock>
-                        <TextBlock Grid.Row="1" Grid.Column="12" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_10_00"></TextBlock>
-                        <TextBlock Grid.Row="1" Grid.Column="13" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_10_15"></TextBlock>
-                        <TextBlock Grid.Row="1" Grid.Column="14" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_10_30"></TextBlock>
-                        <TextBlock Grid.Row="1" Grid.Column="15" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_10_45"></TextBlock>
-                        <TextBlock Grid.Row="1" Grid.Column="16" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_11_00"></TextBlock>
-                        <TextBlock Grid.Row="1" Grid.Column="17" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_11_15"></TextBlock>
-                        <TextBlock Grid.Row="1" Grid.Column="18" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_11_30"></TextBlock>
-                        <TextBlock Grid.Row="1" Grid.Column="19" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_11_45"></TextBlock>
+                        <TextBlock Grid.Row="1" Grid.Column="0" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_07_00" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="1" Grid.Column="1" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_07_15" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="1" Grid.Column="2" AllowDrop="True"  DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_07_30" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="1" Grid.Column="3" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_07_45" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="1" Grid.Column="4" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_08_00" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="1" Grid.Column="5" AllowDrop="True"  DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_08_15" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="1" Grid.Column="6" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_08_30" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="1" Grid.Column="7" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_08_45" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="1" Grid.Column="8" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_09_00" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="1" Grid.Column="9" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_09_15" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="1" Grid.Column="10" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_09_30" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="1" Grid.Column="11" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_09_45" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="1" Grid.Column="12" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_10_00" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="1" Grid.Column="13" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_10_15" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="1" Grid.Column="14" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_10_30" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="1" Grid.Column="15" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_10_45" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="1" Grid.Column="16" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_11_00" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="1" Grid.Column="17" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_11_15" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="1" Grid.Column="18" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_11_30" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="1" Grid.Column="19" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_11_45" DragLeave="_07_00_DragLeave"></TextBlock>
 
-                        <TextBlock Grid.Row="3" Grid.Column="0" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_12_00"></TextBlock>
-                        <TextBlock Grid.Row="3" Grid.Column="1" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_12_15"></TextBlock>
-                        <TextBlock Grid.Row="3" Grid.Column="2" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_12_30"></TextBlock>
-                        <TextBlock Grid.Row="3" Grid.Column="3"  AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_12_45"></TextBlock>
-                        <TextBlock Grid.Row="3" Grid.Column="4"  AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_13_00"></TextBlock>
-                        <TextBlock Grid.Row="3" Grid.Column="5"  AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_13_15"></TextBlock>
-                        <TextBlock Grid.Row="3" Grid.Column="6" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_13_30"></TextBlock>
-                        <TextBlock Grid.Row="3" Grid.Column="7" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_13_45"></TextBlock>
-                        <TextBlock Grid.Row="3" Grid.Column="8" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_14_00"></TextBlock>
-                        <TextBlock Grid.Row="3" Grid.Column="9" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_14_15"></TextBlock>
-                        <TextBlock Grid.Row="3" Grid.Column="10" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_14_30"></TextBlock>
-                        <TextBlock Grid.Row="3" Grid.Column="11" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_14_45"></TextBlock>
-                        <TextBlock Grid.Row="3" Grid.Column="12" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_15_00"></TextBlock>
-                        <TextBlock Grid.Row="3" Grid.Column="13" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_15_15"></TextBlock>
-                        <TextBlock Grid.Row="3" Grid.Column="14" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_15_30"></TextBlock>
-                        <TextBlock Grid.Row="3" Grid.Column="15" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_15_45"></TextBlock>
-                        <TextBlock Grid.Row="3" Grid.Column="16" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_16_00"></TextBlock>
-                        <TextBlock Grid.Row="3" Grid.Column="17" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_16_15"></TextBlock>
-                        <TextBlock Grid.Row="3" Grid.Column="18" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_16_30"></TextBlock>
-                        <TextBlock Grid.Row="3" Grid.Column="19" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_16_45"></TextBlock>
+                        <TextBlock Grid.Row="3" Grid.Column="0" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_12_00" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="3" Grid.Column="1" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_12_15" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="3" Grid.Column="2" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_12_30" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="3" Grid.Column="3"  AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_12_45" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="3" Grid.Column="4"  AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_13_00" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="3" Grid.Column="5"  AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_13_15" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="3" Grid.Column="6" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_13_30" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="3" Grid.Column="7" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_13_45" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="3" Grid.Column="8" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_14_00" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="3" Grid.Column="9" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_14_15" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="3" Grid.Column="10" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_14_30" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="3" Grid.Column="11" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_14_45" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="3" Grid.Column="12" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_15_00" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="3" Grid.Column="13" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_15_15" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="3" Grid.Column="14" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_15_30" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="3" Grid.Column="15" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_15_45" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="3" Grid.Column="16" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_16_00" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="3" Grid.Column="17" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_16_15" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="3" Grid.Column="18" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_16_30" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="3" Grid.Column="19" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_16_45" DragLeave="_07_00_DragLeave"></TextBlock>
 
-                        <TextBlock Grid.Row="5" Grid.Column="0" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_17_00"></TextBlock>
-                        <TextBlock Grid.Row="5" Grid.Column="1" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_17_15"></TextBlock>
-                        <TextBlock Grid.Row="5" Grid.Column="2" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_17_30"></TextBlock>
-                        <TextBlock Grid.Row="5" Grid.Column="3" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_17_45"></TextBlock>
-                        <TextBlock Grid.Row="5" Grid.Column="4" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_18_00"></TextBlock>
-                        <TextBlock Grid.Row="5" Grid.Column="5" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_18_15"></TextBlock>
-                        <TextBlock Grid.Row="5" Grid.Column="6" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_18_30"></TextBlock>
-                        <TextBlock Grid.Row="5" Grid.Column="7" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_18_45"></TextBlock>
-                        <TextBlock Grid.Row="5" Grid.Column="8" AllowDrop="True"  DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_19_00"></TextBlock>
-                        <TextBlock Grid.Row="5" Grid.Column="9" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_19_15"></TextBlock>
-                        <TextBlock Grid.Row="5" Grid.Column="10" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_19_30"></TextBlock>
-                        <TextBlock Grid.Row="5" Grid.Column="11" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_19_45"></TextBlock>
-                        <TextBlock Grid.Row="5" Grid.Column="12" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_20_00"></TextBlock>
-                        <TextBlock Grid.Row="5" Grid.Column="13" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_20_15"></TextBlock>
-                        <TextBlock Grid.Row="5" Grid.Column="14" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_20_30"></TextBlock>
-                        <TextBlock Grid.Row="5" Grid.Column="15" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_20_45"></TextBlock>
-                        <TextBlock Grid.Row="5" Grid.Column="16" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_21_00"></TextBlock>
-                        <TextBlock Grid.Row="5" Grid.Column="17" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_21_15"></TextBlock>
-                        <TextBlock Grid.Row="5" Grid.Column="18" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_21_30"></TextBlock>
-                        <TextBlock Grid.Row="5" Grid.Column="19" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_21_45"></TextBlock>
+                        <TextBlock Grid.Row="5" Grid.Column="0" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_17_00" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="5" Grid.Column="1" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_17_15" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="5" Grid.Column="2" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_17_30" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="5" Grid.Column="3" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_17_45" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="5" Grid.Column="4" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_18_00" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="5" Grid.Column="5" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_18_15" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="5" Grid.Column="6" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_18_30" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="5" Grid.Column="7" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_18_45" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="5" Grid.Column="8" AllowDrop="True"  DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_19_00" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="5" Grid.Column="9" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_19_15" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="5" Grid.Column="10" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_19_30" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="5" Grid.Column="11" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_19_45" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="5" Grid.Column="12" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_20_00" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="5" Grid.Column="13" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_20_15" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="5" Grid.Column="14" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_20_30" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="5" Grid.Column="15" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_20_45" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="5" Grid.Column="16" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_21_00" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="5" Grid.Column="17" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_21_15" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="5" Grid.Column="18" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_21_30" DragLeave="_07_00_DragLeave"></TextBlock>
+                        <TextBlock Grid.Row="5" Grid.Column="19" AllowDrop="True" DragEnter="Canvas_DragEnter" Drop="Canvas_Drop" Name="_21_45" DragLeave="_07_00_DragLeave"></TextBlock>
 
                     </Grid>
                 </DockPanel>

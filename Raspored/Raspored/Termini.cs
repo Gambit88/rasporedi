@@ -51,7 +51,7 @@ namespace Raspored
             {
                 if (podatak.Ucionica.Oznaka == u.Oznaka)
                 {
-                    endtime = podatak.Pocetak.AddHours((double)(podatak.Trajanje));
+                    endtime = podatak.Pocetak.AddMinutes((double)(podatak.Trajanje)*45);
                     if (podatak.Pocetak.CompareTo(vreme) <= 0 && endtime.CompareTo(vreme) >= 0)//vece od pocetka manje od kraja
                     {
                         return false;
@@ -62,8 +62,10 @@ namespace Raspored
         }
         public bool slobodanZa(DateTime vreme, Termin termin, Ucionica u)
         {
-            DateTime pocetno = termin.Pocetak;
-            DateTime zavrsno = pocetno.AddHours(termin.Trajanje);
+            DateTime pocetno = vreme;
+            DateTime zavrsno = pocetno.AddMinutes(termin.Trajanje*45);
+            DateTime end = pocetno.Date;
+            end = end.AddHours(22);
             DateTime pocetnoPodatak;
             DateTime zavrsnoPodatak;
             foreach (Termin podatak in Podaci)
@@ -71,12 +73,16 @@ namespace Raspored
                 if (podatak.Ucionica.Oznaka == u.Oznaka)
                 {
                     pocetnoPodatak = podatak.Pocetak;
-                    zavrsnoPodatak = podatak.Pocetak.AddHours(podatak.Trajanje);
+                    zavrsnoPodatak = podatak.Pocetak.AddMinutes(podatak.Trajanje*45);
                     if (pocetnoPodatak <= zavrsno && zavrsnoPodatak >= pocetno)
                     {
                         return false;
                     }
                 }
+            }
+            if(zavrsno > end)
+            {
+                return false;
             }
             return true;
         }
@@ -89,7 +95,7 @@ namespace Raspored
             {
                 if (podatak.Ucionica.Oznaka == u.Oznaka) { 
                     pocetnoPodatak = podatak.Pocetak;
-                    zavrsnoPodatak = podatak.Pocetak.AddHours(podatak.Trajanje);
+                    zavrsnoPodatak = podatak.Pocetak.AddMinutes(podatak.Trajanje*45);
                     if (pocetnoPodatak <= dt && zavrsnoPodatak >= dt)
                     {
                         return false;

@@ -65,22 +65,18 @@ namespace Raspored
         {
             if (this.BrMesta < p.VelicinaGrupe)
             {
-                Console.WriteLine("1");
                 return false;
             }
             if (p.Projektor==true && this.Projektor == false)
             {
-                Console.WriteLine("2");
                 return false;
             }
             if (p.Tabla == true && this.Tabla == false)
             {
-                Console.WriteLine("3");
                 return false;
             }
             if (p.Smart == true && this.Smart == false)
             {
-                Console.WriteLine("4");
                 return false;
             }
             foreach(Softver s in p.Softver.Podaci)
@@ -91,7 +87,6 @@ namespace Raspored
                 }
                 else
                 {
-                    Console.WriteLine("5");
                     return false;
                 }
             }
