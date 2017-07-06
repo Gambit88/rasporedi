@@ -41,7 +41,6 @@ namespace Raspored
 		
         List<TextBlock> listaTrenutnihTermina = new List<TextBlock>();
         List<Border> listaTmpBordera = new List<Border>();
-        public ObservableCollection<Softver> softvers { get; set; }
 
         public MainWindow()
         {
@@ -54,7 +53,6 @@ namespace Raspored
 
             InitializeComponent();
             this.DataContext = this;
-            softvers = new ObservableCollection<Softver>();
 
             DispatcherTimer timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromMinutes(1);
@@ -77,13 +75,13 @@ namespace Raspored
             terminiNeaktivni.add(4, DateTime.Now, null, "P13");
             terminiAktivni.add(2, new DateTime(2017,7,7,10,30,00), ucionice.get("A5"), "P13");
 
-            foreach (var item in softver.Podaci)
-            {
-                softvers.Add(item);
-            }
-
             classroomList.ItemsSource = ucionice.Podaci;
             terminiZaOdraditi.ItemsSource = terminiNeaktivni.Podaci;
+
+            dgrSoftver.ItemsSource = softver.Podaci;
+            dgrUcionica.ItemsSource = ucionice.Podaci;
+            dgrSmer.ItemsSource = smerovi.Podaci;
+            dgrPredmet.ItemsSource = predmeti.Podaci;
         }
         //klik na dan
         private void Button_Click(object sender, RoutedEventArgs e)

@@ -76,7 +76,10 @@ namespace Raspored
                 }
             }
         }
+        public Smer()
+        {
 
+        }
 
         public Smer(string oznaka, string naziv, string opis, DateTime datum)
         {

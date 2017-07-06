@@ -179,6 +179,10 @@ namespace Raspored
             }
         }
 
+        public Predmet()
+        {
+
+        }
 
         public Predmet(string oznaka, string naziv, string opis, Smer smer, int velicinaGrupe, int brCasovaMin, int brTermina, bool projektor, bool tabla, bool smart, string os, Softveri softveri)
         {

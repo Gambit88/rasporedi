@@ -125,7 +125,10 @@ namespace Raspored
                 }
             }
         }
+        public Ucionica()
+        {
 
+        }
 
         public Ucionica(string oznaka, string opis, int brMesta, bool projektor, bool tabla, bool smart, string os, Softveri softver)
         {
