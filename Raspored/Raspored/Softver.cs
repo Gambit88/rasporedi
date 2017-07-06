@@ -124,6 +124,10 @@ namespace Raspored
                 }
             }
         }
+        public Softver()
+        {
+
+        }
 
         public Softver(string oznaka, string naziv, string opis, string os, string proizvodjac, string sajt, string godinaIzdanja, double cena)
         {
