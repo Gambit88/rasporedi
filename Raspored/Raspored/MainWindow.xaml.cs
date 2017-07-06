@@ -937,8 +937,9 @@ namespace Raspored
             tabelaUcionicaDesniDeoPanel.Visibility = Visibility.Collapsed;
             tabelaSmerovaDesniDeoPanel.Visibility = Visibility.Collapsed;
             tabelaPredmetaDesniDeoPanel.Visibility = Visibility.Collapsed;
+
             rasporedLeviDeoPanel.Visibility = Visibility.Visible;
-            rasporedNoviDesniDeoPanel.Visibility = Visibility.Visible;
+            rasporedDesniDeoPanel.Visibility = Visibility.Visible;
         }
     }
 }
